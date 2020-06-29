@@ -41,5 +41,4 @@ fi
 cp -rf init.vim ~/.config/nvim/ 
 
 echo -e "Configuração realizada com sucesso.\n
-	Agora abra o seu nvim e digite no modo normal \033[01;32m:PluginInstall\033[01;37!
-"
+	Agora abra o seu nvim e digite no modo normal \033[01;32m:PluginInstall\033[01;37!"
