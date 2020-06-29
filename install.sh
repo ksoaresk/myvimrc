@@ -39,6 +39,11 @@ then
 	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 fi
 
+if [ ! -d ~/.config/nvim ]
+then
+	sudo apt-get install -y neovim
+fi
+
 cp -rf init.vim ~/.config/nvim/ 
 
 echo -e "Configuração realizada com sucesso.\n
