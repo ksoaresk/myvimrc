@@ -5,7 +5,8 @@
 #																								   #
 # Este programa fará a instalação das configurações para uso no nvim                               #
 #																								   #
-# Version: 1                                                                                       #
+# Version: 1 Versão inicial                                                                        #
+# Version: 2 -> Implementação do download do gerenciado de plugins Vunddle					       #
 #																								   #
 ####################################################################################################
 
@@ -20,7 +21,7 @@ case "$1" in
 		;;
 	-v | --version)
 		echo -e "\n\n"
-		grep "^# Versio" $0 | tr -d \# 
+		grep "^# Versio" $0 | tr -d \# | tr -d : | tail -1
 		echo -e "\n\n"
 		exit 0;
 		;;
