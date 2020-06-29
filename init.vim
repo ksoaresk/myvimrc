@@ -1,6 +1,7 @@
 let mapleader="\<space>"
 nnoremap <leader>; A;<ESC>
 
+
 set ai
 set hidden
 set history=500
