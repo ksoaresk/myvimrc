@@ -45,16 +45,18 @@ call vundle#begin()
 
 	Plugin 'VundleVim/Vundle.vim'
 	" Essenciais.
-	Plugin 'scrooloose/nerdtree'                    " Barra lateral para navegação de arquivos
-	Plugin 'git@github.com:godlygeek/tabular.git'   " Vim tabular para tabulações
-	Plugin 'git@github.com:tomtom/tcomment_vim.git' " Para comentar trechos de códgios
+	Plugin 'scrooloose/nerdtree'                     " Barra lateral para navegação de arquivos
+	Plugin 'git@github.com:godlygeek/tabular.git'    " Vim tabular para tabulações
+	Plugin 'git@github.com:tomtom/tcomment_vim.git'  " Para comentar trechos de códgios
+	Plugin 'git@github.com:jiangmiao/auto-pairs.git' " Adiciona itens de fechamento automáticos como chaves, parenteses, colchetes e outros.
 
     " Codificação
-	Plugin 'git@github.com:mattn/emmet-vim.git'     " Emmet html e CSS
-	Plugin 'git@github.com:ervandew/supertab.git'   " Super tab para autocompletes entre outros
+	Plugin 'git@github.com:mattn/emmet-vim.git'      " Emmet html e CSS
+	Plugin 'git@github.com:ervandew/supertab.git'    " Super tab para autocompletes entre outros
 	
 	" Themes
 	Plugin 'git@github.com:morhetz/gruvbox.git'
+	Plugin 'git@github.com:mhartington/oceanic-next.git'
 	" End Themes
 
 call vundle#end()
@@ -65,4 +67,13 @@ let g:user_emmet_install_global = 0
 let g:user_emmet_expandabbr_key = ',,'
 
 " Definição de esquema de cores
-colorscheme gruvbox
+syntax enable
+if (has("termguicolors"))
+	set termguicolors
+endif
+
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
+
+colorscheme OceanicNext
+" colorscheme gruvbox
