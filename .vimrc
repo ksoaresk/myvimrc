@@ -49,6 +49,7 @@ call vundle#begin()
 	Plugin 'git@github.com:godlygeek/tabular.git'    " Vim tabular para tabulações
 	Plugin 'git@github.com:tomtom/tcomment_vim.git'  " Para comentar trechos de códgios
 	Plugin 'git@github.com:jiangmiao/auto-pairs.git' " Adiciona itens de fechamento automáticos como chaves, parenteses, colchetes e outros.
+	Plugin 'git@github.com:kien/ctrlp.vim.git'       " Pesquisa e abertura de arquivos
 
     " Codificação
 	Plugin 'git@github.com:mattn/emmet-vim.git'      " Emmet html e CSS
@@ -57,6 +58,7 @@ call vundle#begin()
 	" Themes
 	Plugin 'git@github.com:morhetz/gruvbox.git'
 	Plugin 'git@github.com:mhartington/oceanic-next.git'
+	Plugin 'dracula/dracula-theme'
 	" End Themes
 
 call vundle#end()
