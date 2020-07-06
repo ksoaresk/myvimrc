@@ -1,4 +1,4 @@
-syntax on
+syntax enable
 
 " Mapeamento de Teclas 
 let mapleader="\<space>"
@@ -53,7 +53,7 @@ call vundle#begin()
 	Plugin 'git@github.com:tomtom/tcomment_vim.git'    " Para comentar trechos de códgios
 	Plugin 'git@github.com:jiangmiao/auto-pairs.git'   " Adiciona itens de fechamento automáticos como chaves, parenteses, colchetes e outros.
 	Plugin 'git@github.com:kien/ctrlp.vim.git'         " Pesquisa e abertura de arquivos
-	Plugin 'git@github.com:airblade/vim-gitgutter.git' " Extensão para o git
+	Plugin 'git@github.com:airblade/vim-gitgutter.git' " Git plugin
 
     " Codificação
 	Plugin 'git@github.com:mattn/emmet-vim.git'        " Emmet html e CSS
@@ -63,7 +63,10 @@ call vundle#begin()
 	Plugin 'git@github.com:morhetz/gruvbox.git'
 	Plugin 'git@github.com:mhartington/oceanic-next.git'
 	Plugin 'dracula/dracula-theme'
-	" End Themes
+
+	" Airline
+	Plugin 'vim-airline/vim-airline'
+	Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
@@ -84,3 +87,6 @@ let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
 
 " colorscheme gruvbox
+
+" Configuraão do airline
+let g:airline#extensions#tabline#enabled = 1
