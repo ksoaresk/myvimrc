@@ -42,6 +42,7 @@ set t_vb=
 set ts=4
 set visualbell
 set wildmenu
+set updatetime=250
 
 set rtp+=~/.vim/bundle/Vundle.vim 
 call vundle#begin()
@@ -66,7 +67,8 @@ call vundle#begin()
 	Plugin 'tomtom/tlib_vim'
 	Plugin 'garbas/vim-snipmate'
 	Plugin 'honza/vim-snippets'
-	" Plugin 'git@github.com:SirVer/ultisnips.git'             " gerenciamento e uso de snips
+	" Plugin 'git@github.com:SirVer/ultisnips.git'           " gerenciamento e uso de snips
+	Plugin 'git@github.com:mileszs/ack.vim.git'				 " Refinamento da pesquisa
 	
 	" Themes
 	Plugin 'git@github.com:morhetz/gruvbox.git'
@@ -116,5 +118,6 @@ augroup PHP
 augroup END
 
 " GIT
+let g:gitgutter_sign_modified = '>'
 nmap <Leader>n :GitGutterNextHunk<CR>
 nmap <Leader>p :GitGutterPrevHunk<CR>
