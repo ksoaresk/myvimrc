@@ -10,6 +10,7 @@ map <C-F5>           :PluginInstall <CR>
 nmap <F7>            :NERDTreeToggle <CR>
 imap <F7> <ESC>      :NERDTreeToggle <CR>
 
+inoremap <F10> <C-R>=strftime('%s') <CR>
 nnoremap <C-s> <ESC> :w! <CR>
 nnoremap <C-q> <ESC> :q! <CR>
 nnoremap <C-e>       :tabclose <CR>
@@ -24,7 +25,6 @@ inoremap <C-s> <ESC> :w! <CR>
 " set background=dark
 " set background=light
 " set t_Co=256
-set ai
 set autoindent            
 set confirm
 set cursorline            
@@ -56,6 +56,7 @@ call vundle#begin()
 
 	" Essenciais.
 	Plugin 'scrooloose/nerdtree'                             " Barra lateral para navegação de arquivos
+	Plugin 'git@github.com:ivalkeen/nerdtree-execute.git'	 " Executar arquivos de dentro do nerdtree
 	Plugin 'git@github.com:godlygeek/tabular.git'            " Vim tabular para tabulações
 	Plugin 'git@github.com:tomtom/tcomment_vim.git'          " Para comentar trechos de códgios
 	Plugin 'git@github.com:jiangmiao/auto-pairs.git'         " Adiciona itens de fechamento automáticos como chaves, parenteses, colchetes e outros.
@@ -92,7 +93,6 @@ let g:user_emmet_install_global = 0
 let g:user_emmet_expandabbr_key = ',,'
 
 " Definição de esquema de cores
-" syntax enable
 colorscheme OceanicNext
 
 set background=light
