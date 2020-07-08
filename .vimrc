@@ -23,7 +23,7 @@ inoremap <C-s> <ESC> :w! <CR>
 " Seta configurações do arquvio 
 
 " set background=dark
-" set background=light
+set background=light
 " set t_Co=256
 set autoindent            
 set confirm
@@ -73,7 +73,7 @@ call vundle#begin()
 	Plugin 'tomtom/tlib_vim'
 	Plugin 'garbas/vim-snipmate'
 	Plugin 'honza/vim-snippets'
-	" Plugin 'git@github.com:SirVer/ultisnips.git'           " gerenciamento e uso de snips
+	Plugin 'git@github.com:SirVer/ultisnips.git'           " gerenciamento e uso de snips
 	Plugin 'git@github.com:mileszs/ack.vim.git'				 " Refinamento da pesquisa
 	
 	" Themes
@@ -95,7 +95,6 @@ let g:user_emmet_expandabbr_key = ',,'
 " Definição de esquema de cores
 colorscheme OceanicNext
 
-set background=light
 if (has("termguicolors"))
 	set termguicolors
 endif
