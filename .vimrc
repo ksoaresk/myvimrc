@@ -23,6 +23,7 @@ inoremap <C-s> <ESC> :w! <CR>
 
 " set background=dark
 " set background=light
+" set t_Co=256
 set ai
 set autoindent            
 set confirm
@@ -40,8 +41,7 @@ set relativenumber
 set smartcase
 set smartindent           
 set softtabstop=4
-set sw=4
-set t_Co=256
+set sw=5
 set t_vb=
 set term=xterm-256color
 set ts=4
