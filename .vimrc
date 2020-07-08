@@ -20,29 +20,34 @@ nnoremap <C-PageDown>:tabp <CR>
 inoremap <C-s> <ESC> :w! <CR>
 
 " Seta configurações do arquvio 
+
+" set background=dark
+" set background=light
 set ai
 set autoindent            
-set background=dark
-" set background=light
 set confirm
 set cursorline            
 set encoding=utf-8
 set history=500
 set hlsearch
+set ignorecase
 set incsearch
 set nocompatible              
 set noerrorbells
 set nowrap
 set number
 set relativenumber
+set smartcase
 set smartindent           
 set softtabstop=4
 set sw=4
+set t_Co=256
 set t_vb=
+set term=xterm-256color
 set ts=4
+set updatetime=250
 set visualbell
 set wildmenu
-set updatetime=250
 
 set rtp+=~/.vim/bundle/Vundle.vim 
 call vundle#begin()
@@ -87,9 +92,10 @@ let g:user_emmet_install_global = 0
 let g:user_emmet_expandabbr_key = ',,'
 
 " Definição de esquema de cores
-syntax enable
+" syntax enable
 colorscheme OceanicNext
 
+set background=light
 if (has("termguicolors"))
 	set termguicolors
 endif
