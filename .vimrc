@@ -40,10 +40,10 @@ set number
 set relativenumber
 set smartcase
 set smartindent           
-set softtabstop=4
-set sw=5
+set sw=4
 set t_vb=
 set term=xterm-256color
+set softtabstop=4
 set ts=4
 set updatetime=250
 set visualbell
@@ -127,3 +127,7 @@ augroup END
 let g:gitgutter_sign_modified = '>'
 nmap <Leader>n :GitGutterNextHunk<CR>
 nmap <Leader>p :GitGutterPrevHunk<CR>
+
+" CtrlP conf
+" Sane Ignore For ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git\|Data'
