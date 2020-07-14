@@ -1,21 +1,8 @@
-source ~/.myvimrc/keys.vim
-source ~/.myvimrc/plugins.vim
-
-" Definição de esquema de cores
-colorscheme OceanicNext
-" colorscheme gruvbox
-
-if (has("termguicolors"))
-	set termguicolors
-endif
-
-let g:oceanic_next_terminal_bold   = 1
-let g:oceanic_next_terminal_italic = 1
-
 " Configuração do emmet-vim
 autocmd FileType html,css EmmetInstall
 let g:user_emmet_install_global = 0
 let g:user_emmet_expandabbr_key = ',,'
+" colorscheme gruvbox
 
 " Configuraão do airline
 let g:airline#extensions#tabline#enabled = 1
