@@ -26,7 +26,7 @@ inoremap <F10> <C-R>=strftime('%s') <CR>
 
 " set background=dark
 set background=light
-" set t_Co=256
+set t_Co=256
 set autoindent            
 set confirm
 set cursorline            
@@ -50,3 +50,4 @@ set ts=4
 set updatetime=250
 set visualbell
 set wildmenu
+set formatexpr=xmlformat#Format()
