@@ -11,7 +11,7 @@ imap <F7> <ESC>       : NERDTreeToggle <CR>
 nnoremap <C-s> <ESC>  : w! <CR>
 nnoremap <C-q> <ESC>  : q! <CR>
 nnoremap <C-e>        : tabclose <CR>
-nnoremap <C-t>        : tabnew <CR>
+nnoremap <S-t>        : tabnew <CR>
 nnoremap <S-tab>      : tabn <CR>
 nnoremap <C-PageDown> : tabp <CR>
 inoremap <C-s> <ESC>  : w! <CR>
