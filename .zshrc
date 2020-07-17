@@ -98,7 +98,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias cb="xclip -selection clipebard"
+alias cb="xclip -selection clipboard"
+
 alias vimrc="vi ~/.vimrc"
 alias tmuxrc="vi ~/.tmux.conf"
 alias zshrc="source ~/.zshrc"
