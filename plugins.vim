@@ -4,7 +4,7 @@ call vundle#begin()
 	Plugin 'VundleVim/Vundle.vim'
 
 	" Essenciais.
-	" Plugin 'git@github.com:kien/ctrlp.vim.git'             " Pesquisa e abertura de arquivos
+	" Plugin 'git@github.com:kien/ctrlp.vim.git'                        " Pesquisa e abertura de arquivos
 	Plugin 'scrooloose/nerdtree'                                        " Barra lateral para navegação de arquivos
 	Plugin 'git@github.com:ivalkeen/nerdtree-execute.git'               " Executar arquivos de dentro do nerdtree
 	Plugin 'git@github.com:godlygeek/tabular.git'                       " Vim tabular para tabulações
