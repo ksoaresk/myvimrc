@@ -25,9 +25,11 @@ call vundle#begin()
 	Plugin 'tomtom/tlib_vim'
 	Plugin 'garbas/vim-snipmate'
 	Plugin 'honza/vim-snippets'
-	Plugin 'git@github.com:SirVer/ultisnips.git'                      " gerenciamento e uso de snips
+"Plugin 'git@github.com:SirVer/ultisnips.git'                      " gerenciamento e uso de snips
 	Plugin 'git@github.com:mileszs/ack.vim.git'                         " Refinamento da pesquisa
 	Plugin 'git@github.com:chrisbra/vim-xml-runtime.git'				" Tratamento e formatação de XML de forma dinamica
+	Plugin 'git@github.com:majutsushi/tagbar.git'				" Navegador de estrutura
+	Plugin 'git@github.com:vim-syntastic/syntastic.git' " análise de sintaxe
 	
 	" Themes
 	Plugin 'git@github.com:morhetz/gruvbox.git'

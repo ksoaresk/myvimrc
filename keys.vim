@@ -7,6 +7,8 @@ map <C-F5>            : PluginInstall <CR>
 map <F12>             : !ctags -R .<cr>
 nmap <F7>             : NERDTreeToggle <CR>
 imap <F7> <ESC>       : NERDTreeToggle <CR>
+nmap  <F8>            : TagbarToggle <CR>
+imap  <F8><ESC>       : TagbarToggle <CR>
 
 nnoremap <C-s> <ESC>  : w! <CR>
 nnoremap <C-q> <ESC>  : q! <CR>

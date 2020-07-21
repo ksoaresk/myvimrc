@@ -115,3 +115,29 @@ let g:airline_symbols.dirty='⚡'
 
 " NerdTree
 let NERDTreeShowHidden = 1
+
+" PHP Find Subclasses
+function! PhpSubclasses(word)
+	exe 'Ack "extends.*' . a:word . ' *($|{)"'
+endfunction
+
+" PHP Find Implementations
+function! PhpImplementations(word)
+	exe 'Ack "implements.*' . a:word . ' *($|{)"'
+endfunction
+
+noremap <Leader>fi :call PhpImplementations('<cword>')<CR>
+noremap <Leader>fe :call PhpSubclasses('<cword>')<CR>
+
+" Syntastic configuration
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Syntastic configuration for PHP
+let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
+let g:syntastic_php_phpcs_exec = './bin/phpcs'
+let g:syntastic_php_phpcs_args = '--standard=psr2'
+let g:syntastic_php_phpmd_exec = './bin/phpmd'
+let g:syntastic_php_phpmd_post_args = 'cleancode,codesize,controversial,design,unusedcode'
