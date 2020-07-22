@@ -54,11 +54,11 @@ let g:UltiSnipsEditSplit           = "vertical"
 let g:UltiSnipsSnippetsDir         = "~/.vim/bundle/ultisnips/"
 
 " PHP
-augroup PHP
-	autocmd! 
-	" Check for PHP syntax errors after saving a file
-	autocmd BufWritePost {*.php} echom system("php -l ".expand('%'))
-augroup END
+" augroup PHP
+" 	autocmd! 
+" 	" Check for PHP syntax errors after saving a file
+" 	autocmd BufWritePost {*.php} echom system("php -l ".expand('%'))
+" augroup END
 
 " GIT
 let g:gitgutter_sign_modified = '>'
