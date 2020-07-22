@@ -13,6 +13,7 @@ set ignorecase
 set incsearch
 set nocompatible              
 set noerrorbells
+set hidden
 set nowrap
 set number
 set relativenumber
