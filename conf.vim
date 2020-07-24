@@ -1,22 +1,23 @@
 syntax on
 
-set autoindent            
 " set background=light
+set autoindent            
 set background=dark
 set confirm
 set cursorline            
 set encoding=UTF-8
 set formatexpr=xmlformat#Format()
+set hidden
 set history=500
 set hlsearch
 set ignorecase
 set incsearch
 set nocompatible              
 set noerrorbells
-set hidden
 set nowrap
 set number
 set relativenumber
+set showmatch
 set smartcase
 set smartindent           
 set softtabstop=4
@@ -27,6 +28,7 @@ set ts=4
 set updatetime=250
 set visualbell
 set wildmenu
+set comments=sl:/*,mb:\ *,elx:\ */
 
 " Definição de esquema de cores
 colorscheme OceanicNext
@@ -115,7 +117,22 @@ let g:airline_symbols.dirty='⚡'
 
 
 " NerdTree
+" Dicas
+" O NERDTree pode abrir os arquivos em abas e ainda dividir a tela.
+" Mudar o foco: Para mudar o foco, pressione CTRL w + direção. A direção pode ser com as teclas hjkl ou as teclas direcionais. CTRL w + CTRL w (isso mesmo, 2 vezes) chaveia entre as janelas.
+" Abrir o arquivo na mesma tela, dividindo na horizontal: Selecione o arquivo no NERDTree e pressione “i”
+" Abrir o arquivo na mesma tela, dividindo na vertical: Selecione o arquivo no NERDTree e pressione “s”
+" Abrir o arquivo em outra aba: Selecione o arquivo no NERDTree e pressione “t”
+" Para chavear entre as abas: Pressione “g” e depois “t”, para próxima, ou “T” para a anterior, ou “#gt” para mudar para aba número #. Para facilitar, nas configurações têm uma função e um atalho para mudar de aba. H, move para aba anterior, e L, para a próxima.
+
 let NERDTreeShowHidden = 1
+" Open a NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
+" When open change the focus to the file (and not the NERDTree)
+autocmd! VimEnter * NERDTree | wincmd w
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"-------------------------------------------------------------------------------------------------------------
 
 " PHP Find Subclasses
 function! PhpSubclasses(word)
