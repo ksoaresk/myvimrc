@@ -28,7 +28,7 @@ set ts=4
 set updatetime=250
 set visualbell
 set wildmenu
-set comments=sl:/*,mb:\ *,elx:\ */
+" set comments=sl:/*,mb:\ *,elx:\ */
 
 " Definição de esquema de cores
 colorscheme OceanicNext
