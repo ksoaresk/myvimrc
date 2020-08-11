@@ -43,5 +43,4 @@ call vundle#begin()
 	Plugin 'vim-airline/vim-airline-themes'
 	Plugin 'ryanoasis/vim-devicons'
 
-call vundle#end()
-
+call vundle#end() 
