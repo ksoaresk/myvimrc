@@ -22,4 +22,5 @@ nnoremap <C-p>        : Files <CR>
 inoremap <C-p> <ESC>  : Files <CR>
 nnoremap <C-i>        : FZF <CR>
 
-inoremap <F10> <C-R>=strftime('%s') <CR> 
+inoremap <F9> <C-R>=strftime('%s') <CR> 
+inoremap <leader>exco <C-R>=strftime('%s') <CR> 
