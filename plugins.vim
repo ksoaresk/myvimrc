@@ -30,6 +30,7 @@ call vundle#begin()
 	Plugin 'chrisbra/vim-xml-runtime'                " Tratamento e formatação de XML de forma dinamica
 	Plugin 'majutsushi/tagbar'                       " Navegador de estrutura
 	Plugin 'vim-syntastic/syntastic'                 " análise de sintaxe
+	Plugin 'stephpy/vim-php-cs-fixer'
 	
 	" Themes
 	Plugin 'morhetz/gruvbox'

@@ -28,6 +28,7 @@ set ts=4
 set updatetime=250
 set visualbell
 set wildmenu
+
 " set comments=sl:/*,mb:\ *,elx:\ */
 
 " Definição de esquema de cores
@@ -48,6 +49,7 @@ let g:user_emmet_expandabbr_key = ',,'
 
 " Configuraão do airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
 " Ultil snippets
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -127,11 +129,11 @@ let g:airline_symbols.dirty='⚡'
 
 let NERDTreeShowHidden = 1
 " Open a NERDTree automatically when vim starts up
-autocmd vimenter * NERDTree
-" When open change the focus to the file (and not the NERDTree)
-autocmd! VimEnter * NERDTree | wincmd w
-" close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd vimenter * NERDTree
+"" When open change the focus to the file (and not the NERDTree)
+"autocmd! VimEnter * NERDTree | wincmd w
+"" close vim if the only window left open is a NERDTree
+"autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "-------------------------------------------------------------------------------------------------------------
 
 " PHP Find Subclasses
@@ -159,3 +161,31 @@ let g:syntastic_php_phpcs_exec = './bin/phpcs'
 let g:syntastic_php_phpcs_args = '--standard=psr2'
 let g:syntastic_php_phpmd_exec = './bin/phpmd'
 let g:syntastic_php_phpmd_post_args = 'cleancode,codesize,controversial,design,unusedcode'
+
+" PHP CS FIXER CONFIG
+" If php-cs-fixer is in $PATH, you don't need to define line below
+let g:php_cs_fixer_path = "~/.myvimrc/php-cs-fixer" " define the path to the php-cs-fixer.phar
+
+" If you use php-cs-fixer version 1.x
+let g:php_cs_fixer_level = "symfony"                   " options: --level (default:symfony)
+let g:php_cs_fixer_config = "default"                  " options: --config
+" If you want to define specific fixers:
+"let g:php_cs_fixer_fixers_list = "linefeed,short_tag" " options: --fixers
+"let g:php_cs_fixer_config_file = '.php_cs'            " options: --config-file
+" End of php-cs-fixer version 1 config params
+
+" If you use php-cs-fixer version 2.x
+let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
+"let g:php_cs_fixer_cache = ".php_cs.cache" " options: --cache-file
+"let g:php_cs_fixer_config_file = '.php_cs' " options: --config
+" End of php-cs-fixer version 2 config params
+
+let g:php_cs_fixer_php_path = "php"               " Path to PHP
+let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
+let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
+let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1,
+
+autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
+
+nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
+nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
