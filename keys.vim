@@ -4,7 +4,7 @@ nnoremap <leader>; A;<ESC>
 
 map <F5>                      : source ~/.vimrc <CR>
 map <C-F5>                    : PluginInstall <CR>
-map <F12>                     : !ctags -R pwd <CR>
+" map <F12>                     : !ctags -R expand("%:p") <CR>
 
 " Navegação nos arquivos NerdTree
 nmap <F7>                     : NERDTreeToggle <CR>
