@@ -36,6 +36,7 @@ call vundle#begin()
 	Plugin 'morhetz/gruvbox'
 	Plugin 'mhartington/oceanic-next'
 	Plugin 'dracula/dracula-theme'
+	Plugin 'altercation/vim-colors-solarized'
 
 	" Airline
 	Plugin 'Lokaltog/vim-powerline'

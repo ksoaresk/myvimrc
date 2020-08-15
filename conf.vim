@@ -1,8 +1,8 @@
 syntax on
 
-" set background=light
+set background=light
+" set background=dark
 set autoindent            
-set background=dark
 set confirm
 set cursorline            
 set encoding=UTF-8
@@ -22,7 +22,7 @@ set smartcase
 set smartindent           
 set softtabstop=4
 set sw=4
-set t_Co=256
+" set t_Co=256
 set t_vb=
 set ts=4
 set updatetime=250
@@ -32,8 +32,12 @@ set wildmenu
 " set comments=sl:/*,mb:\ *,elx:\ */
 
 " Definição de esquema de cores
-colorscheme OceanicNext
-" colorscheme gruvbox
+" colorscheme OceanicNext
+colorscheme gruvbox
+
+" colorscheme solarized
+" let g:solarized_termcolors=256
+" colorscheme dracula
 
 if (has("termguicolors"))
 	set termguicolors
