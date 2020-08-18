@@ -15,22 +15,21 @@ nmap  <F8>                    : TagbarToggle <CR>
 imap  <F8><ESC>               : TagbarToggle <CR>
 
 " Teclas para navegação em buscas no conteúdos dos arquivos com `vimgrep! /expression/g dir|file.ext`
-map <F2>                      : copen<CR>
-map <F3>                      : cclose<CR>
-map <A-n>                     : cnext<CR>
-map <A-p>                     : cprevious<CR>
+map <F2>                : copen<CR>
+map <F3>                : cclose<CR>
+map <A-n>               : cnext<CR>
+map <A-p>               : cprevious<CR>
 
-nnoremap <C-s> <ESC>          : w! <CR>
-nnoremap <C-q> <ESC>          : q! <CR>
-nnoremap <C-e>                : tabclose <CR>
-nnoremap <S-t>                : tabnew <CR>
-nnoremap <S-tab>              : tabn <CR>
-nnoremap <C-PageDown>         : tabp <CR>
-inoremap <C-s> <ESC>          : w! <CR>
+nnoremap <C-s> <ESC>    : w! <CR>
+nnoremap <C-q> <ESC>    : q! <CR>
+nnoremap <C-e>          : tabclose <CR>
+nnoremap <S-t>          : tabnew <CR>
+nnoremap <S-tab>        : tabn <CR>
+nnoremap <C-PageDown>   : tabp <CR>
+inoremap <C-s> <ESC>    : w! <CR>
 
-nnoremap <silent> <C-p>       : Files <CR>
-inoremap <silent> <C-p> <ESC> : Files <CR>
-nnoremap <silent> <C-i>       : FZF <CR>
+nnoremap <silent> <C-p> : Files <CR>
+nnoremap <silent> <C-i> : FZF <CR>
 
 inoremap <F9> <C-R>=strftime('%s') <CR> 
 inoremap <leader>exco <C-R>=strftime('%s') <CR> 
