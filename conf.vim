@@ -29,22 +29,25 @@ set updatetime=250
 set visualbell
 set wildmenu
 
-" set comments=sl:/*,mb:\ *,elx:\ */
-
-" Definição de esquema de cores
-" colorscheme OceanicNext
-colorscheme gruvbox
-
-" colorscheme solarized
-" let g:solarized_termcolors=256
-" colorscheme dracula
-
+" Configuração dos temas
 if (has("termguicolors"))
 	set termguicolors
 endif
 
+" Definição de esquema de cores
+" colorscheme OceanicNext
+" colorscheme gruvbox
+" colorscheme solarized
+colorscheme dracula
+
+" enable italic text
+let g:gruvbox_italic = '1'
+
+let g:solarized_termcolors=256
+
 let g:oceanic_next_terminal_bold   = 1
 let g:oceanic_next_terminal_italic = 1
+" --------------------------------------
 
 " Configuração do emmet-vim
 autocmd FileType html,css EmmetInstall
