@@ -1,7 +1,7 @@
 syntax on
 
-set background=light
-" set background=dark
+" set background=light
+set background=dark
 set autoindent            
 set confirm
 set cursorline            
@@ -22,38 +22,37 @@ set smartcase
 set smartindent           
 set softtabstop=4
 set sw=4
-" set t_Co=256
+set t_Co=256
 set t_vb=
 set ts=4
 set updatetime=250
 set visualbell
 set wildmenu
 
-" set comments=sl:/*,mb:\ *,elx:\ */
-
-" Definição de esquema de cores
-" colorscheme OceanicNext
-colorscheme gruvbox
-
-" colorscheme solarized
-" let g:solarized_termcolors=256
-" colorscheme dracula
-
+"----------- DEFINIÇÃO DE ESQUEMA DE CORES -----------
 if (has("termguicolors"))
 	set termguicolors
 endif
 
+colorscheme OceanicNext
+" colorscheme gruvbox
+" colorscheme solarized
+" colorscheme dracula
+
+let g:solarized_termcolors=256
 let g:oceanic_next_terminal_bold   = 1
 let g:oceanic_next_terminal_italic = 1
 
-" Configuração do emmet-vim
+"----------- CONFIGURAÇÃO DO EMMET-VIM ----------
 autocmd FileType html,css EmmetInstall
 let g:user_emmet_install_global = 0
 let g:user_emmet_expandabbr_key = ',,'
 
-" Configuraão do airline
+"---------- CONFIGURAÃO DO AIRLINE ------------
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+" let g:airline_theme='base16_oceanicnext'
+" let g:airline_solarized_bg='dark'
 
 " Ultil snippets
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -61,13 +60,6 @@ let g:UltiSnipsJumpForwardTrigger  = "<c-b>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 let g:UltiSnipsEditSplit           = "vertical"
 let g:UltiSnipsSnippetsDir         = "~/.vim/bundle/ultisnips/"
-
-" PHP
-" augroup PHP
-" 	autocmd! 
-" 	" Check for PHP syntax errors after saving a file
-" 	autocmd BufWritePost {*.php} echom system("php -l ".expand('%'))
-" augroup END
 
 " GIT
 let g:gitgutter_sign_modified = '>'
@@ -140,56 +132,3 @@ let NERDTreeShowHidden = 1
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "-------------------------------------------------------------------------------------------------------------
 
-" PHP Find Subclasses
-function! PhpSubclasses(word)
-	exe 'Ack "extends.*' . a:word . ' *($|{)"'
-endfunction
-
-" PHP Find Implementations
-function! PhpImplementations(word)
-	exe 'Ack "implements.*' . a:word . ' *($|{)"'
-endfunction
-
-noremap <Leader>fi :call PhpImplementations('<cword>')<CR>
-noremap <Leader>fe :call PhpSubclasses('<cword>')<CR>
-
-" Syntastic configuration
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" Syntastic configuration for PHP
-let g:syntastic_php_checkers = ['php', 'phpcs', 'phpmd']
-let g:syntastic_php_phpcs_exec = './bin/phpcs'
-let g:syntastic_php_phpcs_args = '--standard=psr2'
-let g:syntastic_php_phpmd_exec = './bin/phpmd'
-let g:syntastic_php_phpmd_post_args = 'cleancode,codesize,controversial,design,unusedcode'
-
-" PHP CS FIXER CONFIG
-" If php-cs-fixer is in $PATH, you don't need to define line below
-let g:php_cs_fixer_path = "~/.myvimrc/php-cs-fixer" " define the path to the php-cs-fixer.phar
-
-" If you use php-cs-fixer version 1.x
-let g:php_cs_fixer_level = "symfony"                   " options: --level (default:symfony)
-let g:php_cs_fixer_config = "default"                  " options: --config
-" If you want to define specific fixers:
-"let g:php_cs_fixer_fixers_list = "linefeed,short_tag" " options: --fixers
-"let g:php_cs_fixer_config_file = '.php_cs'            " options: --config-file
-" End of php-cs-fixer version 1 config params
-
-" If you use php-cs-fixer version 2.x
-let g:php_cs_fixer_rules = "@PSR2"          " options: --rules (default:@PSR2)
-"let g:php_cs_fixer_cache = ".php_cs.cache" " options: --cache-file
-"let g:php_cs_fixer_config_file = '.php_cs' " options: --config
-" End of php-cs-fixer version 2 config params
-
-let g:php_cs_fixer_php_path = "php"               " Path to PHP
-let g:php_cs_fixer_enable_default_mapping = 1     " Enable the mapping by default (<leader>pcd)
-let g:php_cs_fixer_dry_run = 0                    " Call command with dry-run option
-let g:php_cs_fixer_verbose = 0                    " Return the output of command if 1,
-
-autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
-
-nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
-nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>

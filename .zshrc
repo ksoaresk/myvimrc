@@ -100,11 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cb="xclip -selection clipboard"
-
-alias vimrc="vi ~/.vimrc"
-alias tmuxrc="vi ~/.tmux.conf"
-alias zshrc="source ~/.zshrc"
-alias vzshrc="vi ~/.zshrc"
+alias vi="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
