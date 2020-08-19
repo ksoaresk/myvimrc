@@ -1,7 +1,7 @@
 syntax on
 
-set background=light
-" set background=dark
+" set background=light
+set background=dark
 set autoindent            
 set confirm
 set cursorline            
@@ -22,7 +22,7 @@ set smartcase
 set smartindent           
 set softtabstop=4
 set sw=4
-" set t_Co=256
+set t_Co=256
 set t_vb=
 set ts=4
 set updatetime=250
@@ -78,13 +78,13 @@ nmap <Leader>n :GitGutterNextHunk<CR>
 nmap <Leader>p :GitGutterPrevHunk<CR>
 
 " FZF
-function! s:fzf_statusline()
-  " Override statusline as you like
-  highlight fzf1 ctermfg=161 ctermbg=251
-  highlight fzf2 ctermfg=23 ctermbg=251
-  highlight fzf3 ctermfg=237 ctermbg=251
-  setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
-endfunction
+" function! s:fzf_statusline()
+"   " Override statusline as you like
+"   highlight fzf1 ctermfg=161 ctermbg=251
+"   highlight fzf2 ctermfg=23 ctermbg=251
+"   highlight fzf3 ctermfg=237 ctermbg=251
+"   setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
+" endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline()
 
