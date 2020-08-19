@@ -10,22 +10,21 @@ set shortmess=aoO
 badd +3 .myvimrc/conf.vim
 badd +1 .myvimrc/.vimrc
 badd +1 ~/.myvimrc/plugins.vim
-badd +0 ~/.myvimrc/php_config.vim
-badd +0 ~/.myvimrc/keys.vim
+badd +1 ~/.myvimrc/php_config.vim
+badd +1 ~/.myvimrc/keys.vim
 argglobal
 %argdel
 $argadd .myvimrc/conf.vim
-edit ~/.myvimrc/plugins.vim
+edit .myvimrc/conf.vim
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
 wincmd _ | wincmd |
 vsplit
-2wincmd h
-wincmd w
 wincmd _ | wincmd |
-split
-1wincmd k
+vsplit
+3wincmd h
+wincmd w
 wincmd w
 wincmd w
 wincmd _ | wincmd |
@@ -39,16 +38,32 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 64 + 96) / 193)
-exe '2resize ' . ((&lines * 23 + 25) / 51)
-exe 'vert 2resize ' . ((&columns * 64 + 96) / 193)
-exe '3resize ' . ((&lines * 24 + 25) / 51)
-exe 'vert 3resize ' . ((&columns * 64 + 96) / 193)
+exe 'vert 1resize ' . ((&columns * 48 + 96) / 193)
+exe 'vert 2resize ' . ((&columns * 47 + 96) / 193)
+exe 'vert 3resize ' . ((&columns * 48 + 96) / 193)
 exe '4resize ' . ((&lines * 24 + 25) / 51)
-exe 'vert 4resize ' . ((&columns * 63 + 96) / 193)
+exe 'vert 4resize ' . ((&columns * 47 + 96) / 193)
 exe '5resize ' . ((&lines * 23 + 25) / 51)
-exe 'vert 5resize ' . ((&columns * 63 + 96) / 193)
+exe 'vert 5resize ' . ((&columns * 47 + 96) / 193)
 argglobal
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+silent! normal! zE
+let s:l = 33 - ((32 * winheight(0) + 24) / 48)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+33
+normal! 0
+wincmd w
+argglobal
+if bufexists("~/.myvimrc/plugins.vim") | buffer ~/.myvimrc/plugins.vim | else | edit ~/.myvimrc/plugins.vim | endif
 setlocal fdm=manual
 setlocal fde=0
 setlocal fmr={{{,}}}
@@ -76,29 +91,11 @@ setlocal fml=1
 setlocal fdn=20
 setlocal fen
 silent! normal! zE
-let s:l = 60 - ((22 * winheight(0) + 11) / 23)
+let s:l = 3 - ((2 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-60
-normal! 040|
-wincmd w
-argglobal
-if bufexists(".myvimrc/conf.vim") | buffer .myvimrc/conf.vim | else | edit .myvimrc/conf.vim | endif
-setlocal fdm=manual
-setlocal fde=0
-setlocal fmr={{{,}}}
-setlocal fdi=#
-setlocal fdl=0
-setlocal fml=1
-setlocal fdn=20
-setlocal fen
-silent! normal! zE
-let s:l = 95 - ((4 * winheight(0) + 12) / 24)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-95
+3
 normal! 0
 wincmd w
 argglobal
@@ -137,16 +134,13 @@ normal! zt
 3
 normal! 0
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 64 + 96) / 193)
-exe '2resize ' . ((&lines * 23 + 25) / 51)
-exe 'vert 2resize ' . ((&columns * 64 + 96) / 193)
-exe '3resize ' . ((&lines * 24 + 25) / 51)
-exe 'vert 3resize ' . ((&columns * 64 + 96) / 193)
+exe 'vert 1resize ' . ((&columns * 48 + 96) / 193)
+exe 'vert 2resize ' . ((&columns * 47 + 96) / 193)
+exe 'vert 3resize ' . ((&columns * 48 + 96) / 193)
 exe '4resize ' . ((&lines * 24 + 25) / 51)
-exe 'vert 4resize ' . ((&columns * 63 + 96) / 193)
+exe 'vert 4resize ' . ((&columns * 47 + 96) / 193)
 exe '5resize ' . ((&lines * 23 + 25) / 51)
-exe 'vert 5resize ' . ((&columns * 63 + 96) / 193)
+exe 'vert 5resize ' . ((&columns * 47 + 96) / 193)
 tabnext 1
 if exists('s:wipebuf') && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

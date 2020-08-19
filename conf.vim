@@ -29,6 +29,10 @@ set updatetime=250
 set visualbell
 set wildmenu
 
+if has("nvim") 
+  set inccommand=split
+endif
+
 "----------- DEFINIÇÃO DE ESQUEMA DE CORES -----------
 if (has("termguicolors"))
 	set termguicolors
@@ -130,5 +134,4 @@ let NERDTreeShowHidden = 1
 "autocmd! VimEnter * NERDTree | wincmd w
 "" close vim if the only window left open is a NERDTree
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"-------------------------------------------------------------------------------------------------------------
-
+"------------------------------------------------------------------------------------------------------------- 
