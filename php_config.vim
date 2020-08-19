@@ -1,4 +1,4 @@
-"-----------------------CONFIGURAÇÃO PHP------------------------
+" CONFIGURAÇÃO PHP------------------------
 augroup PHP
 	autocmd! 
 	autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
