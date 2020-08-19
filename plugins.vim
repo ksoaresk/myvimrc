@@ -36,6 +36,7 @@ call vundle#begin()
 	Plugin 'morhetz/gruvbox'
 	Plugin 'mhartington/oceanic-next'
 	Plugin 'dracula/vim', { 'name': 'dracula' }
+	Plugin 'lifepillar/vim-solarized8'
 	Plugin 'altercation/vim-colors-solarized'
 
 	" Airline

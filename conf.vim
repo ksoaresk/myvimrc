@@ -39,6 +39,7 @@ if (has("termguicolors"))
 endif
 
 colorscheme OceanicNext
+" colorscheme solarized8
 " colorscheme gruvbox
 " colorscheme solarized
 " colorscheme dracula
