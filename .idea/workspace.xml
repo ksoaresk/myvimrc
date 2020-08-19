@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:github" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:gitlab" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="261895e8-6855-4c3f-81c7-9304afefc9a9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/php_config.vim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.php_cs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vimrc" beforeDir="false" afterPath="$PROJECT_DIR$/.vimrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.zshrc" beforeDir="false" afterPath="$PROJECT_DIR$/.zshrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf.vim" beforeDir="false" afterPath="$PROJECT_DIR$/conf.vim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/init.vim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/keys.vim" beforeDir="false" afterPath="$PROJECT_DIR$/keys.vim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins.vim" beforeDir="false" afterPath="$PROJECT_DIR$/plugins.vim" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1gJmkhWogt5r5nDjFn6z3JeAxRO" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="261895e8-6855-4c3f-81c7-9304afefc9a9" name="Default Changelist" comment="" />
+      <created>1597841213609</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1597841213609</updated>
+      <workItem from="1597841215030" duration="177000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="182" y="117" width="1536" height="872" key="MergeDialog" timestamp="1597841380784">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="182" y="117" width="1536" height="872" key="MergeDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1597841380784" />
+    <state x="591" y="315" width="728" height="475" key="MultipleFileMergeDialog" timestamp="1597841388401">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="591" y="315" width="728" height="475" key="MultipleFileMergeDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1597841388401" />
+  </component>
+</project>
