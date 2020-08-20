@@ -31,7 +31,8 @@ call vundle#begin()
 	Plugin 'majutsushi/tagbar'                       " Navegador de estrutura
 	Plugin 'vim-syntastic/syntastic'                 " análise de sintaxe
 	Plugin 'stephpy/vim-php-cs-fixer'
-	
+	Plugin 'adoy/vim-php-refactoring-toolbox'
+
 	" Themes
 	Plugin 'morhetz/gruvbox'
 	Plugin 'mhartington/oceanic-next'

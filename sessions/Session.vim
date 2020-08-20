@@ -45,36 +45,35 @@ nnoremap <silent> 	 : FZF 
 xnoremap <silent>  :call multiple_cursors#new("v", 0)
 nnoremap <silent>  :call multiple_cursors#new("n", 1)
 nnoremap <silent>  : Files 
-nnoremap            : q! 
+nnoremap      : q! 
 snoremap  "_c
-nnoremap            : w! 
-nmap <silent>  <Plug>TComment_
-nmap <silent> 1 <Plug>TComment_1
-nmap <silent> 2 <Plug>TComment_2
-nmap <silent> 3 <Plug>TComment_3
-nmap <silent> 4 <Plug>TComment_4
-nmap <silent> 5 <Plug>TComment_5
-nmap <silent> 6 <Plug>TComment_6
-nmap <silent> 7 <Plug>TComment_7
-nmap <silent> 8 <Plug>TComment_8
-nmap <silent> 9 <Plug>TComment_9
+nnoremap      : w! 
 vmap <silent> 9 <Plug>TComment_9
+nmap <silent> 9 <Plug>TComment_9
 omap <silent> 9 <Plug>TComment_9
 vmap <silent> 8 <Plug>TComment_8
+nmap <silent> 8 <Plug>TComment_8
 omap <silent> 8 <Plug>TComment_8
 vmap <silent> 7 <Plug>TComment_7
+nmap <silent> 7 <Plug>TComment_7
 omap <silent> 7 <Plug>TComment_7
 vmap <silent> 6 <Plug>TComment_6
+nmap <silent> 6 <Plug>TComment_6
 omap <silent> 6 <Plug>TComment_6
 vmap <silent> 5 <Plug>TComment_5
+nmap <silent> 5 <Plug>TComment_5
 omap <silent> 5 <Plug>TComment_5
 vmap <silent> 4 <Plug>TComment_4
+nmap <silent> 4 <Plug>TComment_4
 omap <silent> 4 <Plug>TComment_4
 vmap <silent> 3 <Plug>TComment_3
+nmap <silent> 3 <Plug>TComment_3
 omap <silent> 3 <Plug>TComment_3
 vmap <silent> 2 <Plug>TComment_2
+nmap <silent> 2 <Plug>TComment_2
 omap <silent> 2 <Plug>TComment_2
 vmap <silent> 1 <Plug>TComment_1
+nmap <silent> 1 <Plug>TComment_1
 omap <silent> 1 <Plug>TComment_1
 map <silent> ca <Plug>TComment_ca
 map <silent> cc <Plug>TComment_cc
@@ -87,9 +86,8 @@ map <silent> r <Plug>TComment_r
 map <silent>   <Plug>TComment_ 
 map <silent> p <Plug>TComment_p
 vmap <silent>  <Plug>TComment_
+nmap <silent>  <Plug>TComment_
 omap <silent>  <Plug>TComment_
-smap <silent>  __ <Plug>TComment_ __
-nmap <silent>  __ <Plug>TComment_ __
 map <silent>  _s <Plug>TComment_ _s
 map <silent>  _n <Plug>TComment_ _n
 map <silent>  _a <Plug>TComment_ _a
@@ -99,6 +97,8 @@ xmap <silent>  _i <Plug>TComment_ _i
 map <silent>  _  <Plug>TComment_ _ 
 map <silent>  _p <Plug>TComment_ _p
 xmap <silent>  __ <Plug>TComment_ __
+nmap <silent>  __ <Plug>TComment_ __
+smap <silent>  __ <Plug>TComment_ __
 omap <silent>  __ <Plug>TComment_ __
 nnoremap <silent>  pcf :call PhpCsFixerFixFile()
 nnoremap <silent>  pcd :call PhpCsFixerFixDirectory()
@@ -156,20 +156,7 @@ nmap ySs <Plug>YSsurround
 nmap yss <Plug>Yssurround
 nmap yS <Plug>YSurround
 nmap ys <Plug>Ysurround
-nnoremap <SNR>162_: :=v:count ? v:count : ''
-nnoremap <Plug>TComment_ :TComment
-snoremap <Plug>TComment_ __ :TComment
-nnoremap <Plug>TComment_ __ :TComment
-nnoremap <Plug>TComment_1 :call tcomment#SetOption("count", 1)
-nnoremap <Plug>TComment_2 :call tcomment#SetOption("count", 2)
-nnoremap <Plug>TComment_3 :call tcomment#SetOption("count", 3)
-nnoremap <Plug>TComment_4 :call tcomment#SetOption("count", 4)
-nnoremap <Plug>TComment_5 :call tcomment#SetOption("count", 5)
-nnoremap <Plug>TComment_6 :call tcomment#SetOption("count", 6)
-nnoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
-nnoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
-nnoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
-nnoremap <SNR>157_: :=v:count ? v:count : ''
+nnoremap <SNR>151_: :=v:count ? v:count : ''
 smap <S-Tab> <Plug>snipMateBack
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(expand((exists("g:netrw_gx")? g:netrw_gx : '<cfile>')),netrw#CheckIfRemote())
@@ -208,22 +195,31 @@ nnoremap <Plug>TComment_gc3c :call tcomment#ResetOption() | if v:count > 0 |
 nnoremap <Plug>TComment_gc2c :call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc2cg@
 nnoremap <Plug>TComment_gc1c :call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc1cg@
 vnoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
+nnoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
 onoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
 vnoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
+nnoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
 onoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
 vnoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
+nnoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
 onoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
 vnoremap <Plug>TComment_6 :call tcomment#SetOption("count", 6)
+nnoremap <Plug>TComment_6 :call tcomment#SetOption("count", 6)
 onoremap <Plug>TComment_6 :call tcomment#SetOption("count", 6)
 vnoremap <Plug>TComment_5 :call tcomment#SetOption("count", 5)
+nnoremap <Plug>TComment_5 :call tcomment#SetOption("count", 5)
 onoremap <Plug>TComment_5 :call tcomment#SetOption("count", 5)
 vnoremap <Plug>TComment_4 :call tcomment#SetOption("count", 4)
+nnoremap <Plug>TComment_4 :call tcomment#SetOption("count", 4)
 onoremap <Plug>TComment_4 :call tcomment#SetOption("count", 4)
 vnoremap <Plug>TComment_3 :call tcomment#SetOption("count", 3)
+nnoremap <Plug>TComment_3 :call tcomment#SetOption("count", 3)
 onoremap <Plug>TComment_3 :call tcomment#SetOption("count", 3)
 vnoremap <Plug>TComment_2 :call tcomment#SetOption("count", 2)
+nnoremap <Plug>TComment_2 :call tcomment#SetOption("count", 2)
 onoremap <Plug>TComment_2 :call tcomment#SetOption("count", 2)
 vnoremap <Plug>TComment_1 :call tcomment#SetOption("count", 1)
+nnoremap <Plug>TComment_1 :call tcomment#SetOption("count", 1)
 onoremap <Plug>TComment_1 :call tcomment#SetOption("count", 1)
 nnoremap <Plug>TComment_gC :call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gCg@
 nnoremap <Plug>TComment_gc :call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gcg@
@@ -249,6 +245,8 @@ xnoremap <Plug>TComment_ _i :TCommentInline
 noremap <Plug>TComment_ _  :TComment 
 noremap <Plug>TComment_ _p vip:TComment
 xnoremap <Plug>TComment_ __ :TCommentMaybeInline
+nnoremap <Plug>TComment_ __ :TComment
+snoremap <Plug>TComment_ __ :TComment
 onoremap <Plug>TComment_ __ :TComment
 noremap <Plug>TComment_ca :call tcomment#SetOption("as", input("Comment as: ", &filetype, "customlist,tcomment#complete#Complete"))
 noremap <Plug>TComment_cc :call tcomment#SetOption("count", v:count1)
@@ -261,6 +259,7 @@ noremap <Plug>TComment_r :TCommentRight
 noremap <Plug>TComment_  :TComment 
 noremap <Plug>TComment_p m`vip:TComment``
 vnoremap <Plug>TComment_ :TCommentMaybeInline
+nnoremap <Plug>TComment_ :TComment
 onoremap <Plug>TComment_ :TComment
 nnoremap <C-PageDown> : tabp 
 nnoremap <S-Tab> : tabn 
@@ -273,9 +272,8 @@ map <F5> : source ~/.vimrc 
 imap S <Plug>ISurround
 imap s <Plug>Isurround
 inoremap <silent> 	 =UltiSnips#ExpandSnippet()
-inoremap <silent>   : Files 
 imap 	 <Plug>snipMateShow
-inoremap            : w! 
+inoremap      : w! 
 imap <silent> 9 <Plug>TComment_9
 imap <silent> 8 <Plug>TComment_8
 imap <silent> 7 <Plug>TComment_7
@@ -295,10 +293,10 @@ imap <silent>   <Plug>TComment_
 imap <silent> p <Plug>TComment_p
 imap <silent>  <Plug>TComment_
 inoremap  exco =strftime('%s')  
-smap î : cnext
 xnoremap <silent> î :call multiple_cursors#select_all("v", 0)
 nnoremap <silent> î :call multiple_cursors#select_all("n", 1)
 map ð : cprevious
+smap î : cnext
 omap î : cnext
 let &cpo=s:cpo_save
 unlet s:cpo_save
@@ -316,7 +314,7 @@ set incsearch
 set laststatus=2
 set printoptions=paper:a4
 set ruler
-set runtimepath=~/.vim,~/.vim/pack/vendor/start/nerdtree,~/.vim/pack/themes/start/dracula,~/.vim/pack/plugins/start/lightline,~/.vim/bundle/Vundle.vim,~/.vim/bundle/nerdtree,~/.vim/bundle/nerdtree-execute,~/.vim/bundle/tabular,~/.vim/bundle/tcomment_vim,~/.vim/bundle/auto-pairs,~/.vim/bundle/fzf,~/.vim/bundle/fzf.vim,~/.vim/bundle/vim-gitgutter,~/.vim/bundle/vim-fugitive,~/.vim/bundle/vim-css-color,~/.vim/bundle/emmet-vim,~/.vim/bundle/supertab,~/.vim/bundle/vim-multiple-cursors,~/.vim/bundle/vim-surround,~/.vim/bundle/vim-addon-mw-utils,~/.vim/bundle/tlib_vim,~/.vim/bundle/vim-snipmate,~/.vim/bundle/vim-snippets,~/.vim/bundle/ultisnips,~/.vim/bundle/ack.vim,~/.vim/bundle/vim-xml-runtime,~/.vim/bundle/tagbar,~/.vim/bundle/syntastic,~/.vim/bundle/vim-php-cs-fixer,~/.vim/bundle/gruvbox,~/.vim/bundle/oceanic-next,~/.vim/bundle/dracula,~/.vim/bundle/vim-colors-solarized,~/.vim/bundle/vim-powerline,~/.vim/bundle/vim-airline,~/.vim/bundle/vim-airline-themes,~/.vim/bundle/vim-devicons,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after,~/.vim/bundle/Vundle.vim,~/.vim/bundle/Vundle.vim/after,~/.vim/bundle/nerdtree/after,~/.vim/bundle/nerdtree-execute/after,~/.vim/bundle/tabular/after,~/.vim/bundle/tcomment_vim/after,~/.vim/bundle/auto-pairs/after,~/.vim/bundle/fzf/after,~/.vim/bundle/fzf.vim/after,~/.vim/bundle/vim-gitgutter/after,~/.vim/bundle/vim-fugitive/after,~/.vim/bundle/vim-css-color/after,~/.vim/bundle/emmet-vim/after,~/.vim/bundle/supertab/after,~/.vim/bundle/vim-multiple-cursors/after,~/.vim/bundle/vim-surround/after,~/.vim/bundle/vim-addon-mw-utils/after,~/.vim/bundle/tlib_vim/after,~/.vim/bundle/vim-snipmate/after,~/.vim/bundle/vim-snippets/after,~/.vim/bundle/ultisnips/after,~/.vim/bundle/ack.vim/after,~/.vim/bundle/vim-xml-runtime/after,~/.vim/bundle/tagbar/after,~/.vim/bundle/syntastic/after,~/.vim/bundle/vim-php-cs-fixer/after,~/.vim/bundle/gruvbox/after,~/.vim/bundle/oceanic-next/after,~/.vim/bundle/dracula/after,~/.vim/bundle/vim-colors-solarized/after,~/.vim/bundle/vim-powerline/after,~/.vim/bundle/vim-airline/after,~/.vim/bundle/vim-airline-themes/after,~/.vim/bundle/vim-devicons/after,~/.vim/pack/themes/start/dracula/after
+set runtimepath=~/.vim,~/.vim/pack/vendor/start/nerdtree,~/.vim/pack/themes/start/dracula,~/.vim/pack/plugins/start/lightline,~/.vim/bundle/Vundle.vim,~/.vim/bundle/nerdtree,~/.vim/bundle/nerdtree-execute,~/.vim/bundle/tabular,~/.vim/bundle/tcomment_vim,~/.vim/bundle/auto-pairs,~/.vim/bundle/fzf,~/.vim/bundle/fzf.vim,~/.vim/bundle/vim-gitgutter,~/.vim/bundle/vim-fugitive,~/.vim/bundle/vim-css-color,~/.vim/bundle/emmet-vim,~/.vim/bundle/supertab,~/.vim/bundle/vim-multiple-cursors,~/.vim/bundle/vim-surround,~/.vim/bundle/vim-addon-mw-utils,~/.vim/bundle/tlib_vim,~/.vim/bundle/vim-snipmate,~/.vim/bundle/vim-snippets,~/.vim/bundle/ultisnips,~/.vim/bundle/ack.vim,~/.vim/bundle/vim-xml-runtime,~/.vim/bundle/tagbar,~/.vim/bundle/syntastic,~/.vim/bundle/vim-php-cs-fixer,~/.vim/bundle/gruvbox,~/.vim/bundle/oceanic-next,~/.vim/bundle/dracula,~/.vim/bundle/vim-solarized8,~/.vim/bundle/vim-colors-solarized,~/.vim/bundle/vim-powerline,~/.vim/bundle/vim-airline,~/.vim/bundle/vim-airline-themes,~/.vim/bundle/vim-devicons,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after,~/.vim/bundle/Vundle.vim,~/.vim/bundle/Vundle.vim/after,~/.vim/bundle/nerdtree/after,~/.vim/bundle/nerdtree-execute/after,~/.vim/bundle/tabular/after,~/.vim/bundle/tcomment_vim/after,~/.vim/bundle/auto-pairs/after,~/.vim/bundle/fzf/after,~/.vim/bundle/fzf.vim/after,~/.vim/bundle/vim-gitgutter/after,~/.vim/bundle/vim-fugitive/after,~/.vim/bundle/vim-css-color/after,~/.vim/bundle/emmet-vim/after,~/.vim/bundle/supertab/after,~/.vim/bundle/vim-multiple-cursors/after,~/.vim/bundle/vim-surround/after,~/.vim/bundle/vim-addon-mw-utils/after,~/.vim/bundle/tlib_vim/after,~/.vim/bundle/vim-snipmate/after,~/.vim/bundle/vim-snippets/after,~/.vim/bundle/ultisnips/after,~/.vim/bundle/ack.vim/after,~/.vim/bundle/vim-xml-runtime/after,~/.vim/bundle/tagbar/after,~/.vim/bundle/syntastic/after,~/.vim/bundle/vim-php-cs-fixer/after,~/.vim/bundle/gruvbox/after,~/.vim/bundle/oceanic-next/after,~/.vim/bundle/dracula/after,~/.vim/bundle/vim-solarized8/after,~/.vim/bundle/vim-colors-solarized/after,~/.vim/bundle/vim-powerline/after,~/.vim/bundle/vim-airline/after,~/.vim/bundle/vim-airline-themes/after,~/.vim/bundle/vim-devicons/after,~/.vim/pack/themes/start/dracula/after
 set shiftwidth=4
 set showmatch
 set showtabline=2
@@ -324,7 +322,7 @@ set smartcase
 set smartindent
 set softtabstop=4
 set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.ilg,.inx,.out,.toc
-set tabline=%!airline#extensions#tabline#get()
+set tabline=%!lightline#tabline()
 set tabstop=4
 set termguicolors
 set updatetime=250
@@ -333,20 +331,17 @@ set wildmenu
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
-cd ~/workspace/agilize-rh-api
+cd ~/.myvimrc
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
 set shortmess=aoO
-badd +1 ~/.myvimrc/.vimrc
-badd +3 ~/.myvimrc/init.vim
-badd +1 ~/.myvimrc/keys.vim
-badd +1 ~/.myvimrc/plugins.vim
-badd +1 ~/.myvimrc/conf.vim
-badd +0 ~/.myvimrc/
+badd +0 .vimrc
+badd +0 ~/.myvimrc/conf.vim
+badd +0 ~/.myvimrc/plugins.vim
 argglobal
 silent! argdel *
-$argadd ~/.myvimrc/
+$argadd .vimrc
 edit ~/.myvimrc/conf.vim
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -355,22 +350,17 @@ vsplit
 wincmd w
 wincmd _ | wincmd |
 split
-wincmd _ | wincmd |
-split
-2wincmd k
-wincmd w
+1wincmd k
 wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 139 + 119) / 238)
-exe '2resize ' . ((&lines * 5 + 31) / 62)
-exe 'vert 2resize ' . ((&columns * 98 + 119) / 238)
-exe '3resize ' . ((&lines * 33 + 31) / 62)
-exe 'vert 3resize ' . ((&columns * 98 + 119) / 238)
-exe '4resize ' . ((&lines * 19 + 31) / 62)
-exe 'vert 4resize ' . ((&columns * 98 + 119) / 238)
+exe 'vert 1resize ' . ((&columns * 119 + 119) / 238)
+exe '2resize ' . ((&lines * 30 + 31) / 63)
+exe 'vert 2resize ' . ((&columns * 118 + 119) / 238)
+exe '3resize ' . ((&lines * 29 + 31) / 63)
+exe 'vert 3resize ' . ((&columns * 118 + 119) / 238)
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
@@ -527,340 +517,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 15 - ((14 * winheight(0) + 29) / 59)
+let s:l = 36 - ((34 * winheight(0) + 30) / 60)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-15
-normal! 0
-wincmd w
-argglobal
-if bufexists('~/.myvimrc/.vimrc') | buffer ~/.myvimrc/.vimrc | else | edit ~/.myvimrc/.vimrc | endif
-let s:cpo_save=&cpo
-set cpo&vim
-inoremap <buffer> <silent> <BS> =AutoPairsDelete()
-nmap <buffer>  hp <Plug>(GitGutterPreviewHunk)
-nmap <buffer>  hu <Plug>(GitGutterUndoHunk)
-nmap <buffer>  hs <Plug>(GitGutterStageHunk)
-xmap <buffer>  hs <Plug>(GitGutterStageHunk)
-inoremap <buffer> <silent> § =AutoPairsMoveCharacter('''')
-inoremap <buffer> <silent> ¢ =AutoPairsMoveCharacter('"')
-inoremap <buffer> <silent> © =AutoPairsMoveCharacter(')')
-inoremap <buffer> <silent> ¨ =AutoPairsMoveCharacter('(')
-inoremap <buffer> <silent> î :call AutoPairsJump()a
-inoremap <buffer> <silent> <expr> ð AutoPairsToggle()
-inoremap <buffer> <silent> â =AutoPairsBackInsert()
-inoremap <buffer> <silent> å =AutoPairsFastWrap()
-inoremap <buffer> <silent> ý =AutoPairsMoveCharacter('}')
-inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
-inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
-inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
-nmap <buffer> [c <Plug>(GitGutterPrevHunk)
-nmap <buffer> ]c <Plug>(GitGutterNextHunk)
-xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
-omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
-inoremap <buffer> <silent>  =AutoPairsDelete()
-inoremap <buffer> <silent>   =AutoPairsSpace()
-inoremap <buffer> <silent> " =AutoPairsInsert('"')
-inoremap <buffer> <silent> ' =AutoPairsInsert('''')
-inoremap <buffer> <silent> ( =AutoPairsInsert('(')
-inoremap <buffer> <silent> ) =AutoPairsInsert(')')
-noremap <buffer> <silent> î :call AutoPairsJump()
-noremap <buffer> <silent> ð :call AutoPairsToggle()
-inoremap <buffer> <silent> [ =AutoPairsInsert('[')
-inoremap <buffer> <silent> ] =AutoPairsInsert(']')
-inoremap <buffer> <silent> ` =AutoPairsInsert('`')
-inoremap <buffer> <silent> { =AutoPairsInsert('{')
-inoremap <buffer> <silent> } =AutoPairsInsert('}')
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-set cursorline
-setlocal cursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'vim'
-setlocal filetype=vim
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=xmlformat#Format()
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-set relativenumber
-setlocal relativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=4
-setlocal noshortname
-setlocal signcolumn=auto
-setlocal smartindent
-setlocal softtabstop=4
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=%{lightline#link()}%#LightlineLeft_inactive_0#%(\ %t\ %)%#LightlineLeft_inactive_0_1#%#LightlineMiddle_inactive#%=%#LightlineRight_inactive_1_2#%#LightlineRight_inactive_1#%(\ %3p%%\ %)%#LightlineRight_inactive_0_1#%#LightlineRight_inactive_0#%(\ %3l:%-2v\ %)
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'vim'
-setlocal syntax=vim
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tags=
-setlocal termkey=
-setlocal termsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal nowinfixheight
-setlocal nowinfixwidth
-set nowrap
-setlocal nowrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 2) / 5)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-2
-normal! 0
-wincmd w
-argglobal
-if bufexists('~/.myvimrc/keys.vim') | buffer ~/.myvimrc/keys.vim | else | edit ~/.myvimrc/keys.vim | endif
-let s:cpo_save=&cpo
-set cpo&vim
-inoremap <buffer> <silent> <BS> =AutoPairsDelete()
-nmap <buffer>  hp <Plug>(GitGutterPreviewHunk)
-nmap <buffer>  hu <Plug>(GitGutterUndoHunk)
-nmap <buffer>  hs <Plug>(GitGutterStageHunk)
-xmap <buffer>  hs <Plug>(GitGutterStageHunk)
-inoremap <buffer> <silent> § =AutoPairsMoveCharacter('''')
-inoremap <buffer> <silent> ¢ =AutoPairsMoveCharacter('"')
-inoremap <buffer> <silent> © =AutoPairsMoveCharacter(')')
-inoremap <buffer> <silent> ¨ =AutoPairsMoveCharacter('(')
-inoremap <buffer> <silent> î :call AutoPairsJump()a
-inoremap <buffer> <silent> <expr> ð AutoPairsToggle()
-inoremap <buffer> <silent> â =AutoPairsBackInsert()
-inoremap <buffer> <silent> å =AutoPairsFastWrap()
-inoremap <buffer> <silent> ý =AutoPairsMoveCharacter('}')
-inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
-inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
-inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
-nmap <buffer> [c <Plug>(GitGutterPrevHunk)
-nmap <buffer> ]c <Plug>(GitGutterNextHunk)
-xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
-omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
-inoremap <buffer> <silent>  =AutoPairsDelete()
-inoremap <buffer> <silent>   =AutoPairsSpace()
-inoremap <buffer> <silent> " =AutoPairsInsert('"')
-inoremap <buffer> <silent> ' =AutoPairsInsert('''')
-inoremap <buffer> <silent> ( =AutoPairsInsert('(')
-inoremap <buffer> <silent> ) =AutoPairsInsert(')')
-noremap <buffer> <silent> î :call AutoPairsJump()
-noremap <buffer> <silent> ð :call AutoPairsToggle()
-inoremap <buffer> <silent> [ =AutoPairsInsert('[')
-inoremap <buffer> <silent> ] =AutoPairsInsert(']')
-inoremap <buffer> <silent> ` =AutoPairsInsert('`')
-inoremap <buffer> <silent> { =AutoPairsInsert('{')
-inoremap <buffer> <silent> } =AutoPairsInsert('}')
-let &cpo=s:cpo_save
-unlet s:cpo_save
-setlocal keymap=
-setlocal noarabic
-setlocal autoindent
-setlocal backupcopy=
-setlocal balloonexpr=
-setlocal nobinary
-setlocal nobreakindent
-setlocal breakindentopt=
-setlocal bufhidden=
-setlocal buflisted
-setlocal buftype=
-setlocal nocindent
-setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
-setlocal cinoptions=
-setlocal cinwords=if,else,while,do,for,switch
-setlocal colorcolumn=
-setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
-setlocal commentstring=/*%s*/
-setlocal complete=.,w,b,u,t,i
-setlocal concealcursor=
-setlocal conceallevel=0
-setlocal completefunc=
-setlocal nocopyindent
-setlocal cryptmethod=
-setlocal nocursorbind
-setlocal nocursorcolumn
-set cursorline
-setlocal cursorline
-setlocal define=
-setlocal dictionary=
-setlocal nodiff
-setlocal equalprg=
-setlocal errorformat=
-setlocal noexpandtab
-if &filetype != 'vim'
-setlocal filetype=vim
-endif
-setlocal fixendofline
-setlocal foldcolumn=0
-setlocal foldenable
-setlocal foldexpr=0
-setlocal foldignore=#
-setlocal foldlevel=0
-setlocal foldmarker={{{,}}}
-setlocal foldmethod=manual
-setlocal foldminlines=1
-setlocal foldnestmax=20
-setlocal foldtext=foldtext()
-setlocal formatexpr=xmlformat#Format()
-setlocal formatoptions=tcq
-setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
-setlocal formatprg=
-setlocal grepprg=
-setlocal iminsert=0
-setlocal imsearch=-1
-setlocal include=
-setlocal includeexpr=
-setlocal indentexpr=
-setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
-setlocal noinfercase
-setlocal iskeyword=@,48-57,_,192-255
-setlocal keywordprg=
-setlocal nolinebreak
-setlocal nolisp
-setlocal lispwords=
-setlocal nolist
-setlocal makeencoding=
-setlocal makeprg=
-setlocal matchpairs=(:),{:},[:]
-setlocal modeline
-setlocal modifiable
-setlocal nrformats=bin,octal,hex
-set number
-setlocal number
-setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=
-setlocal nopreserveindent
-setlocal nopreviewwindow
-setlocal quoteescape=\\
-setlocal noreadonly
-set relativenumber
-setlocal relativenumber
-setlocal norightleft
-setlocal rightleftcmd=search
-setlocal noscrollbind
-setlocal shiftwidth=4
-setlocal noshortname
-setlocal signcolumn=auto
-setlocal smartindent
-setlocal softtabstop=4
-setlocal nospell
-setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
-setlocal spellfile=
-setlocal spelllang=en
-setlocal statusline=%{lightline#link()}%#LightlineLeft_inactive_0#%(\ %t\ %)%#LightlineLeft_inactive_0_1#%#LightlineMiddle_inactive#%=%#LightlineRight_inactive_1_2#%#LightlineRight_inactive_1#%(\ %3p%%\ %)%#LightlineRight_inactive_0_1#%#LightlineRight_inactive_0#%(\ %3l:%-2v\ %)
-setlocal suffixesadd=
-setlocal swapfile
-setlocal synmaxcol=3000
-if &syntax != 'vim'
-setlocal syntax=vim
-endif
-setlocal tabstop=4
-setlocal tagcase=
-setlocal tags=
-setlocal termkey=
-setlocal termsize=
-setlocal textwidth=0
-setlocal thesaurus=
-setlocal noundofile
-setlocal undolevels=-123456
-setlocal nowinfixheight
-setlocal nowinfixwidth
-set nowrap
-setlocal nowrap
-setlocal wrapmargin=0
-silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 16) / 33)
-if s:l < 1 | let s:l = 1 | endif
-exe s:l
-normal! zt
-1
-normal! 0
+36
+normal! 04|
 wincmd w
 argglobal
 if bufexists('~/.myvimrc/plugins.vim') | buffer ~/.myvimrc/plugins.vim | else | edit ~/.myvimrc/plugins.vim | endif
@@ -1019,20 +681,182 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 9) / 19)
+let s:l = 5 - ((4 * winheight(0) + 15) / 30)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+5
+normal! 0
+wincmd w
+argglobal
+if bufexists('.vimrc') | buffer .vimrc | else | edit .vimrc | endif
+let s:cpo_save=&cpo
+set cpo&vim
+inoremap <buffer> <silent> <BS> =AutoPairsDelete()
+nmap <buffer>  hp <Plug>(GitGutterPreviewHunk)
+nmap <buffer>  hu <Plug>(GitGutterUndoHunk)
+nmap <buffer>  hs <Plug>(GitGutterStageHunk)
+xmap <buffer>  hs <Plug>(GitGutterStageHunk)
+inoremap <buffer> <silent> § =AutoPairsMoveCharacter('''')
+inoremap <buffer> <silent> ¢ =AutoPairsMoveCharacter('"')
+inoremap <buffer> <silent> © =AutoPairsMoveCharacter(')')
+inoremap <buffer> <silent> ¨ =AutoPairsMoveCharacter('(')
+inoremap <buffer> <silent> î :call AutoPairsJump()a
+inoremap <buffer> <silent> <expr> ð AutoPairsToggle()
+inoremap <buffer> <silent> â =AutoPairsBackInsert()
+inoremap <buffer> <silent> å =AutoPairsFastWrap()
+inoremap <buffer> <silent> ý =AutoPairsMoveCharacter('}')
+inoremap <buffer> <silent> û =AutoPairsMoveCharacter('{')
+inoremap <buffer> <silent> Ý =AutoPairsMoveCharacter(']')
+inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
+nmap <buffer> [c <Plug>(GitGutterPrevHunk)
+nmap <buffer> ]c <Plug>(GitGutterNextHunk)
+xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
+omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
+inoremap <buffer> <silent>  =AutoPairsDelete()
+inoremap <buffer> <silent>   =AutoPairsSpace()
+inoremap <buffer> <silent> " =AutoPairsInsert('"')
+inoremap <buffer> <silent> ' =AutoPairsInsert('''')
+inoremap <buffer> <silent> ( =AutoPairsInsert('(')
+inoremap <buffer> <silent> ) =AutoPairsInsert(')')
+noremap <buffer> <silent> î :call AutoPairsJump()
+noremap <buffer> <silent> ð :call AutoPairsToggle()
+inoremap <buffer> <silent> [ =AutoPairsInsert('[')
+inoremap <buffer> <silent> ] =AutoPairsInsert(']')
+inoremap <buffer> <silent> ` =AutoPairsInsert('`')
+inoremap <buffer> <silent> { =AutoPairsInsert('{')
+inoremap <buffer> <silent> } =AutoPairsInsert('}')
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal nocindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+set cursorline
+setlocal cursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal noexpandtab
+if &filetype != 'vim'
+setlocal filetype=vim
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=xmlformat#Format()
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal nolist
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+set relativenumber
+setlocal relativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal signcolumn=auto
+setlocal smartindent
+setlocal softtabstop=4
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%{lightline#link()}%#LightlineLeft_inactive_0#%(\ %t\ %)%#LightlineLeft_inactive_0_1#%#LightlineMiddle_inactive#%=%#LightlineRight_inactive_1_2#%#LightlineRight_inactive_1#%(\ %3p%%\ %)%#LightlineRight_inactive_0_1#%#LightlineRight_inactive_0#%(\ %3l:%-2v\ %)
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'vim'
+setlocal syntax=vim
+endif
+setlocal tabstop=4
+setlocal tagcase=
+setlocal tags=
+setlocal termkey=
+setlocal termsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal nowinfixheight
+setlocal nowinfixwidth
+set nowrap
+setlocal nowrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 1 - ((0 * winheight(0) + 14) / 29)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 1
-normal! 0
+normal! 017|
 wincmd w
-exe 'vert 1resize ' . ((&columns * 139 + 119) / 238)
-exe '2resize ' . ((&lines * 5 + 31) / 62)
-exe 'vert 2resize ' . ((&columns * 98 + 119) / 238)
-exe '3resize ' . ((&lines * 33 + 31) / 62)
-exe 'vert 3resize ' . ((&columns * 98 + 119) / 238)
-exe '4resize ' . ((&lines * 19 + 31) / 62)
-exe 'vert 4resize ' . ((&columns * 98 + 119) / 238)
+exe 'vert 1resize ' . ((&columns * 119 + 119) / 238)
+exe '2resize ' . ((&lines * 30 + 31) / 63)
+exe 'vert 2resize ' . ((&columns * 118 + 119) / 238)
+exe '3resize ' . ((&lines * 29 + 31) / 63)
+exe 'vert 3resize ' . ((&columns * 118 + 119) / 238)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

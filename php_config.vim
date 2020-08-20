@@ -58,3 +58,12 @@ autocmd BufWritePost *.php silent! call PhpCsFixerFixFile()
 
 nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
 nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
+
+" Cinfiguração de refatoração ----------------
+
+" default is 0 -- disabled
+let g:vim_php_refactoring_make_setter_fluent = 1
+"let g:vim_php_refactoring_make_setter_fluent = 2
+let g:vim_php_refactoring_default_property_visibility = 'private'
+let g:vim_php_refactoring_default_method_visibility = 'private'
+
