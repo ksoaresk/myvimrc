@@ -33,3 +33,7 @@ nnoremap <silent> <C-i> : FZF <CR>
 
 inoremap <F9> <C-R>=strftime('%s') <CR> 
 inoremap <leader>exco <C-R>=strftime('%s') <CR> 
+
+" Configura atalho para executar phpunit
+nmap  <S-F2>                    :!make unit-test <CR>
+imap  <S-F2><ESC>               : !make unit-test <CR>

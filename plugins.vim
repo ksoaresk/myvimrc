@@ -14,6 +14,7 @@ call vundle#begin()
 	Plugin 'junegunn/fzf.vim'
 	Plugin 'airblade/vim-gitgutter'                  " Git plugin
 	Plugin 'tpope/vim-fugitive'                      " Git
+	" Plugin 'c9s/phpunit.vim'
 
     " Codificação
 	Plugin 'ap/vim-css-color'                        " Emmet html e CSS
@@ -32,6 +33,7 @@ call vundle#begin()
 	Plugin 'vim-syntastic/syntastic'                 " análise de sintaxe
 	Plugin 'stephpy/vim-php-cs-fixer'
 	Plugin 'adoy/vim-php-refactoring-toolbox'
+	Plugin 'tobyS/pdv'
 
 	" Themes
 	Plugin 'morhetz/gruvbox'

@@ -62,8 +62,16 @@ nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
 " Cinfiguração de refatoração ----------------
 
 " default is 0 -- disabled
-let g:vim_php_refactoring_make_setter_fluent = 1
-"let g:vim_php_refactoring_make_setter_fluent = 2
+let g:vim_php_refactoring_auto_validate_visibility = 1
+" let g:vim_php_refactoring_make_setter_fluent = 1
+let g:vim_php_refactoring_make_setter_fluent = 2
 let g:vim_php_refactoring_default_property_visibility = 'private'
 let g:vim_php_refactoring_default_method_visibility = 'private'
 
+" PHPUnit Configuracao ----------------
+" let g:phpunit_testroot = 'tests'
+" let g:phpunit_bin = '~/workspace/agilize-rh-api/vendor/bin/phpunit'
+" let g:phpunit_srcroot = '~/workspace/agilize-rh-api/tests'
+" let g:phpunit_options = ["--stop-on-failure"]
+
+let g:pdv_template_dir = "~/.vim/bundle/pdv/templates_snip"

@@ -1,7 +1,7 @@
 syntax on
 
-set background=light
-" set background=dark
+" set background=light
+set background=dark
 set autoindent            
 set confirm
 set cursorline            
@@ -38,9 +38,9 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-colorscheme OceanicNext
+" colorscheme OceanicNext
 " colorscheme solarized8
-" colorscheme gruvbox
+colorscheme gruvbox
 " colorscheme solarized
 " colorscheme dracula
 
@@ -136,4 +136,7 @@ let NERDTreeShowHidden = 1
 "autocmd! VimEnter * NERDTree | wincmd w
 "" close vim if the only window left open is a NERDTree
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-"-------------------------------------------------------------------------------------------------------------
+
+" Configuração do cursor-------------------------- 
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"

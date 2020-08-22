@@ -2,6 +2,7 @@ let SessionLoad = 1
 if &cp | set nocp | endif
 let s:cpo_save=&cpo
 set cpo&vim
+inoremap <silent> <SNR>44_AutoPairsReturn =AutoPairsReturn()
 inoremap <silent> <Plug>snipMateShow =snipMate#ShowAvailableSnips()
 inoremap <silent> <Plug>snipMateBack =snipMate#BackwardsSnippet()
 inoremap <silent> <Plug>snipMateTrigger =snipMate#TriggerSnippet(1)
@@ -15,7 +16,7 @@ inoremap <expr> <Plug>(fzf-complete-file-ag) fzf#vim#complete#path('ag -l -g ""'
 inoremap <expr> <Plug>(fzf-complete-file) fzf#vim#complete#path("find . -path '*/\.*' -prune -o -type f -print -o -type l -print | sed 's:^..::'")
 inoremap <expr> <Plug>(fzf-complete-path) fzf#vim#complete#path("find . -path '*/\.*' -prune -o -print | sed '1d;s:^..::'")
 inoremap <expr> <Plug>(fzf-complete-word) fzf#vim#complete#word()
-inoremap <silent> <SNR>44_AutoPairsReturn =AutoPairsReturn()
+inoremap <silent> <SNR>45_AutoPairsReturn =AutoPairsReturn()
 inoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
 inoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
 inoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
@@ -34,6 +35,7 @@ inoremap <Plug>TComment_r :TCommentRight
 inoremap <Plug>TComment_  :TComment 
 inoremap <Plug>TComment_p :norm! m`vip:TComment``
 inoremap <Plug>TComment_ :TComment
+imap <S-F2> : !make unit-test 
 inoremap <F9> =strftime('%s')  
 imap <F8> : TagbarToggle 
 imap <F7>                : NERDTreeToggle 
@@ -48,32 +50,33 @@ nnoremap <silent>  : Files 
 nnoremap      : q! 
 snoremap  "_c
 nnoremap      : w! 
-vmap <silent> 9 <Plug>TComment_9
+nmap <silent>  <Plug>TComment_
+nmap <silent> 1 <Plug>TComment_1
+nmap <silent> 2 <Plug>TComment_2
+nmap <silent> 3 <Plug>TComment_3
+nmap <silent> 4 <Plug>TComment_4
+nmap <silent> 5 <Plug>TComment_5
+nmap <silent> 6 <Plug>TComment_6
+nmap <silent> 7 <Plug>TComment_7
+nmap <silent> 8 <Plug>TComment_8
 nmap <silent> 9 <Plug>TComment_9
+vmap <silent> 9 <Plug>TComment_9
 omap <silent> 9 <Plug>TComment_9
 vmap <silent> 8 <Plug>TComment_8
-nmap <silent> 8 <Plug>TComment_8
 omap <silent> 8 <Plug>TComment_8
 vmap <silent> 7 <Plug>TComment_7
-nmap <silent> 7 <Plug>TComment_7
 omap <silent> 7 <Plug>TComment_7
 vmap <silent> 6 <Plug>TComment_6
-nmap <silent> 6 <Plug>TComment_6
 omap <silent> 6 <Plug>TComment_6
 vmap <silent> 5 <Plug>TComment_5
-nmap <silent> 5 <Plug>TComment_5
 omap <silent> 5 <Plug>TComment_5
 vmap <silent> 4 <Plug>TComment_4
-nmap <silent> 4 <Plug>TComment_4
 omap <silent> 4 <Plug>TComment_4
 vmap <silent> 3 <Plug>TComment_3
-nmap <silent> 3 <Plug>TComment_3
 omap <silent> 3 <Plug>TComment_3
 vmap <silent> 2 <Plug>TComment_2
-nmap <silent> 2 <Plug>TComment_2
 omap <silent> 2 <Plug>TComment_2
 vmap <silent> 1 <Plug>TComment_1
-nmap <silent> 1 <Plug>TComment_1
 omap <silent> 1 <Plug>TComment_1
 map <silent> ca <Plug>TComment_ca
 map <silent> cc <Plug>TComment_cc
@@ -86,8 +89,9 @@ map <silent> r <Plug>TComment_r
 map <silent>   <Plug>TComment_ 
 map <silent> p <Plug>TComment_p
 vmap <silent>  <Plug>TComment_
-nmap <silent>  <Plug>TComment_
 omap <silent>  <Plug>TComment_
+smap <silent>  __ <Plug>TComment_ __
+nmap <silent>  __ <Plug>TComment_ __
 nnoremap  da :call PhpDocAll()
 nnoremap  cog :call PhpCreateGetters()
 nnoremap  sg :call PhpCreateSettersAndGetters()
@@ -110,8 +114,6 @@ xmap <silent>  _i <Plug>TComment_ _i
 map <silent>  _  <Plug>TComment_ _ 
 map <silent>  _p <Plug>TComment_ _p
 xmap <silent>  __ <Plug>TComment_ __
-nmap <silent>  __ <Plug>TComment_ __
-smap <silent>  __ <Plug>TComment_ __
 omap <silent>  __ <Plug>TComment_ __
 nnoremap <silent>  pcf :call PhpCsFixerFixFile()
 nnoremap <silent>  pcd :call PhpCsFixerFixDirectory()
@@ -169,6 +171,19 @@ nmap ySs <Plug>YSsurround
 nmap yss <Plug>Yssurround
 nmap yS <Plug>YSurround
 nmap ys <Plug>Ysurround
+nnoremap <SNR>159_: :=v:count ? v:count : ''
+nnoremap <Plug>TComment_ :TComment
+snoremap <Plug>TComment_ __ :TComment
+nnoremap <Plug>TComment_ __ :TComment
+nnoremap <Plug>TComment_1 :call tcomment#SetOption("count", 1)
+nnoremap <Plug>TComment_2 :call tcomment#SetOption("count", 2)
+nnoremap <Plug>TComment_3 :call tcomment#SetOption("count", 3)
+nnoremap <Plug>TComment_4 :call tcomment#SetOption("count", 4)
+nnoremap <Plug>TComment_5 :call tcomment#SetOption("count", 5)
+nnoremap <Plug>TComment_6 :call tcomment#SetOption("count", 6)
+nnoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
+nnoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
+nnoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
 nnoremap <SNR>158_: :=v:count ? v:count : ''
 smap <S-Tab> <Plug>snipMateBack
 vnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
@@ -208,31 +223,22 @@ nnoremap <Plug>TComment_gc3c :call tcomment#ResetOption() | if v:count > 0 |
 nnoremap <Plug>TComment_gc2c :call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc2cg@
 nnoremap <Plug>TComment_gc1c :call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gc1cg@
 vnoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
-nnoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
 onoremap <Plug>TComment_9 :call tcomment#SetOption("count", 9)
 vnoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
-nnoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
 onoremap <Plug>TComment_8 :call tcomment#SetOption("count", 8)
 vnoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
-nnoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
 onoremap <Plug>TComment_7 :call tcomment#SetOption("count", 7)
 vnoremap <Plug>TComment_6 :call tcomment#SetOption("count", 6)
-nnoremap <Plug>TComment_6 :call tcomment#SetOption("count", 6)
 onoremap <Plug>TComment_6 :call tcomment#SetOption("count", 6)
 vnoremap <Plug>TComment_5 :call tcomment#SetOption("count", 5)
-nnoremap <Plug>TComment_5 :call tcomment#SetOption("count", 5)
 onoremap <Plug>TComment_5 :call tcomment#SetOption("count", 5)
 vnoremap <Plug>TComment_4 :call tcomment#SetOption("count", 4)
-nnoremap <Plug>TComment_4 :call tcomment#SetOption("count", 4)
 onoremap <Plug>TComment_4 :call tcomment#SetOption("count", 4)
 vnoremap <Plug>TComment_3 :call tcomment#SetOption("count", 3)
-nnoremap <Plug>TComment_3 :call tcomment#SetOption("count", 3)
 onoremap <Plug>TComment_3 :call tcomment#SetOption("count", 3)
 vnoremap <Plug>TComment_2 :call tcomment#SetOption("count", 2)
-nnoremap <Plug>TComment_2 :call tcomment#SetOption("count", 2)
 onoremap <Plug>TComment_2 :call tcomment#SetOption("count", 2)
 vnoremap <Plug>TComment_1 :call tcomment#SetOption("count", 1)
-nnoremap <Plug>TComment_1 :call tcomment#SetOption("count", 1)
 onoremap <Plug>TComment_1 :call tcomment#SetOption("count", 1)
 nnoremap <Plug>TComment_gC :call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gCg@
 nnoremap <Plug>TComment_gc :call tcomment#ResetOption() | if v:count > 0 | call tcomment#SetOption("count", v:count) | endif | let w:tcommentPos = getpos(".") |set opfunc=TCommentOpFunc_gcg@
@@ -258,8 +264,6 @@ xnoremap <Plug>TComment_ _i :TCommentInline
 noremap <Plug>TComment_ _  :TComment 
 noremap <Plug>TComment_ _p vip:TComment
 xnoremap <Plug>TComment_ __ :TCommentMaybeInline
-nnoremap <Plug>TComment_ __ :TComment
-snoremap <Plug>TComment_ __ :TComment
 onoremap <Plug>TComment_ __ :TComment
 noremap <Plug>TComment_ca :call tcomment#SetOption("as", input("Comment as: ", &filetype, "customlist,tcomment#complete#Complete"))
 noremap <Plug>TComment_cc :call tcomment#SetOption("count", v:count1)
@@ -272,8 +276,8 @@ noremap <Plug>TComment_r :TCommentRight
 noremap <Plug>TComment_  :TComment 
 noremap <Plug>TComment_p m`vip:TComment``
 vnoremap <Plug>TComment_ :TCommentMaybeInline
-nnoremap <Plug>TComment_ :TComment
 onoremap <Plug>TComment_ :TComment
+nmap <S-F2> :!make unit-test 
 nnoremap <C-PageDown> : tabp 
 nnoremap <S-Tab> : tabn 
 map <F3> : cclose
@@ -306,11 +310,8 @@ imap <silent>   <Plug>TComment_
 imap <silent> p <Plug>TComment_p
 imap <silent>  <Plug>TComment_
 inoremap  exco =strftime('%s')  
-xnoremap <silent> î :call multiple_cursors#select_all("v", 0)
-nnoremap <silent> î :call multiple_cursors#select_all("n", 1)
+map î : cnext
 map ð : cprevious
-smap î : cnext
-omap î : cnext
 let &cpo=s:cpo_save
 unlet s:cpo_save
 set autoindent
@@ -327,7 +328,7 @@ set incsearch
 set laststatus=2
 set printoptions=paper:a4
 set ruler
-set runtimepath=~/.vim,~/.vim/pack/vendor/start/nerdtree,~/.vim/pack/themes/start/dracula,~/.vim/pack/plugins/start/lightline,~/.vim/bundle/Vundle.vim,~/.vim/bundle/nerdtree,~/.vim/bundle/nerdtree-execute,~/.vim/bundle/tabular,~/.vim/bundle/tcomment_vim,~/.vim/bundle/auto-pairs,~/.vim/bundle/fzf,~/.vim/bundle/fzf.vim,~/.vim/bundle/vim-gitgutter,~/.vim/bundle/vim-fugitive,~/.vim/bundle/vim-css-color,~/.vim/bundle/emmet-vim,~/.vim/bundle/supertab,~/.vim/bundle/vim-multiple-cursors,~/.vim/bundle/vim-surround,~/.vim/bundle/vim-addon-mw-utils,~/.vim/bundle/tlib_vim,~/.vim/bundle/vim-snipmate,~/.vim/bundle/vim-snippets,~/.vim/bundle/ultisnips,~/.vim/bundle/ack.vim,~/.vim/bundle/vim-xml-runtime,~/.vim/bundle/tagbar,~/.vim/bundle/syntastic,~/.vim/bundle/vim-php-cs-fixer,~/.vim/bundle/vim-php-refactoring-toolbox,~/.vim/bundle/gruvbox,~/.vim/bundle/oceanic-next,~/.vim/bundle/dracula,~/.vim/bundle/vim-solarized8,~/.vim/bundle/vim-colors-solarized,~/.vim/bundle/vim-powerline,~/.vim/bundle/vim-airline,~/.vim/bundle/vim-airline-themes,~/.vim/bundle/vim-devicons,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after,~/.vim/bundle/Vundle.vim,~/.vim/bundle/Vundle.vim/after,~/.vim/bundle/nerdtree/after,~/.vim/bundle/nerdtree-execute/after,~/.vim/bundle/tabular/after,~/.vim/bundle/tcomment_vim/after,~/.vim/bundle/auto-pairs/after,~/.vim/bundle/fzf/after,~/.vim/bundle/fzf.vim/after,~/.vim/bundle/vim-gitgutter/after,~/.vim/bundle/vim-fugitive/after,~/.vim/bundle/vim-css-color/after,~/.vim/bundle/emmet-vim/after,~/.vim/bundle/supertab/after,~/.vim/bundle/vim-multiple-cursors/after,~/.vim/bundle/vim-surround/after,~/.vim/bundle/vim-addon-mw-utils/after,~/.vim/bundle/tlib_vim/after,~/.vim/bundle/vim-snipmate/after,~/.vim/bundle/vim-snippets/after,~/.vim/bundle/ultisnips/after,~/.vim/bundle/ack.vim/after,~/.vim/bundle/vim-xml-runtime/after,~/.vim/bundle/tagbar/after,~/.vim/bundle/syntastic/after,~/.vim/bundle/vim-php-cs-fixer/after,~/.vim/bundle/vim-php-refactoring-toolbox/after,~/.vim/bundle/gruvbox/after,~/.vim/bundle/oceanic-next/after,~/.vim/bundle/dracula/after,~/.vim/bundle/vim-solarized8/after,~/.vim/bundle/vim-colors-solarized/after,~/.vim/bundle/vim-powerline/after,~/.vim/bundle/vim-airline/after,~/.vim/bundle/vim-airline-themes/after,~/.vim/bundle/vim-devicons/after,~/.vim/pack/themes/start/dracula/after
+set runtimepath=~/.vim,~/.vim/bundle/Vundle.vim,~/.vim/bundle/nerdtree,~/.vim/bundle/nerdtree-execute,~/.vim/bundle/tabular,~/.vim/bundle/tcomment_vim,~/.vim/bundle/auto-pairs,~/.vim/bundle/fzf,~/.vim/bundle/fzf.vim,~/.vim/bundle/vim-gitgutter,~/.vim/bundle/vim-fugitive,~/.vim/bundle/vim-css-color,~/.vim/bundle/emmet-vim,~/.vim/bundle/supertab,~/.vim/bundle/vim-multiple-cursors,~/.vim/bundle/vim-surround,~/.vim/bundle/vim-addon-mw-utils,~/.vim/bundle/tlib_vim,~/.vim/bundle/vim-snipmate,~/.vim/bundle/vim-snippets,~/.vim/bundle/ultisnips,~/.vim/bundle/ack.vim,~/.vim/bundle/vim-xml-runtime,~/.vim/bundle/tagbar,~/.vim/bundle/syntastic,~/.vim/bundle/vim-php-cs-fixer,~/.vim/bundle/vim-php-refactoring-toolbox,~/.vim/bundle/pdv,~/.vim/bundle/gruvbox,~/.vim/bundle/oceanic-next,~/.vim/bundle/dracula,~/.vim/bundle/vim-solarized8,~/.vim/bundle/vim-colors-solarized,~/.vim/bundle/vim-powerline,~/.vim/bundle/vim-airline,~/.vim/bundle/vim-airline-themes,~/.vim/bundle/vim-devicons,~/.vim/pack/vendor/start/nerdtree,~/.vim/pack/themes/start/dracula,~/.vim/pack/plugins/start/lightline,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim80,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,~/.vim/after,~/.vim/bundle/Vundle.vim,~/.vim/pack/themes/start/dracula/after,~/.vim/bundle/Vundle.vim/after,~/.vim/bundle/nerdtree/after,~/.vim/bundle/nerdtree-execute/after,~/.vim/bundle/tabular/after,~/.vim/bundle/tcomment_vim/after,~/.vim/bundle/auto-pairs/after,~/.vim/bundle/fzf/after,~/.vim/bundle/fzf.vim/after,~/.vim/bundle/vim-gitgutter/after,~/.vim/bundle/vim-fugitive/after,~/.vim/bundle/vim-css-color/after,~/.vim/bundle/emmet-vim/after,~/.vim/bundle/supertab/after,~/.vim/bundle/vim-multiple-cursors/after,~/.vim/bundle/vim-surround/after,~/.vim/bundle/vim-addon-mw-utils/after,~/.vim/bundle/tlib_vim/after,~/.vim/bundle/vim-snipmate/after,~/.vim/bundle/vim-snippets/after,~/.vim/bundle/ultisnips/after,~/.vim/bundle/ack.vim/after,~/.vim/bundle/vim-xml-runtime/after,~/.vim/bundle/tagbar/after,~/.vim/bundle/syntastic/after,~/.vim/bundle/vim-php-cs-fixer/after,~/.vim/bundle/vim-php-refactoring-toolbox/after,~/.vim/bundle/pdv/after,~/.vim/bundle/gruvbox/after,~/.vim/bundle/oceanic-next/after,~/.vim/bundle/dracula/after,~/.vim/bundle/vim-solarized8/after,~/.vim/bundle/vim-colors-solarized/after,~/.vim/bundle/vim-powerline/after,~/.vim/bundle/vim-airline/after,~/.vim/bundle/vim-airline-themes/after,~/.vim/bundle/vim-devicons/after
 set shiftwidth=4
 set showmatch
 set showtabline=2
@@ -341,6 +342,7 @@ set termguicolors
 set updatetime=250
 set visualbell
 set wildmenu
+set window=57
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -350,10 +352,10 @@ if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
 endif
 set shortmess=aoO
 badd +4 ~/.myvimrc/.vimrc
-badd +1 ~/.myvimrc/plugins.vim
+badd +36 ~/.myvimrc/plugins.vim
 badd +1 ~/.myvimrc/conf.vim
 badd +1 ~/.myvimrc/php_config.vim
-badd +0 ~/.myvimrc/keys.vim
+badd +1 ~/.myvimrc/keys.vim
 argglobal
 silent! argdel *
 $argadd ~/.myvimrc/.vimrc
@@ -377,13 +379,13 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winminheight=1 winheight=1 winminwidth=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 59 + 119) / 238)
-exe 'vert 2resize ' . ((&columns * 59 + 119) / 238)
-exe 'vert 3resize ' . ((&columns * 59 + 119) / 238)
-exe '4resize ' . ((&lines * 29 + 31) / 62)
-exe 'vert 4resize ' . ((&columns * 58 + 119) / 238)
-exe '5resize ' . ((&lines * 29 + 31) / 62)
-exe 'vert 5resize ' . ((&columns * 58 + 119) / 238)
+exe 'vert 1resize ' . ((&columns * 52 + 105) / 211)
+exe 'vert 2resize ' . ((&columns * 52 + 105) / 211)
+exe 'vert 3resize ' . ((&columns * 52 + 105) / 211)
+exe '4resize ' . ((&lines * 27 + 29) / 58)
+exe 'vert 4resize ' . ((&columns * 52 + 105) / 211)
+exe '5resize ' . ((&lines * 27 + 29) / 58)
+exe 'vert 5resize ' . ((&columns * 52 + 105) / 211)
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
@@ -518,7 +520,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(1)
+setlocal statusline=%{lightline#link()}%#LightlineLeft_inactive_0#%(\ %t\ %)%#LightlineLeft_inactive_0_1#%#LightlineMiddle_inactive#%=%#LightlineRight_inactive_1_2#%#LightlineRight_inactive_1#%(\ %3p%%\ %)%#LightlineRight_inactive_0_1#%#LightlineRight_inactive_0#%(\ %3l:%-2v\ %)
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -540,12 +542,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 19 - ((18 * winheight(0) + 29) / 59)
+let s:l = 24 - ((23 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-19
-normal! 010|
+24
+normal! 05|
 wincmd w
 argglobal
 if bufexists('~/.myvimrc/plugins.vim') | buffer ~/.myvimrc/plugins.vim | else | edit ~/.myvimrc/plugins.vim | endif
@@ -682,7 +684,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(2)
+setlocal statusline=%{lightline#link()}%#LightlineLeft_inactive_0#%(\ %t\ %)%#LightlineLeft_inactive_0_1#%#LightlineMiddle_inactive#%=%#LightlineRight_inactive_1_2#%#LightlineRight_inactive_1#%(\ %3p%%\ %)%#LightlineRight_inactive_0_1#%#LightlineRight_inactive_0#%(\ %3l:%-2v\ %)
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -704,12 +706,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 10 - ((9 * winheight(0) + 29) / 59)
+let s:l = 45 - ((43 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-10
-normal! 0
+45
+normal! 013|
 wincmd w
 argglobal
 if bufexists('~/.myvimrc/php_config.vim') | buffer ~/.myvimrc/php_config.vim | else | edit ~/.myvimrc/php_config.vim | endif
@@ -846,7 +848,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(3)
+setlocal statusline=%{lightline#link()}%#LightlineLeft_active_0#%(\ %{lightline#mode()}\ %)%{(&paste)?\"|\":\"\"}%(\ %{&paste?\"PASTE\":\"\"}\ %)%#LightlineLeft_active_0_1#%#LightlineLeft_active_1#%(\ %R\ %)%{(&readonly)&&(1||(&modified||!&modifiable))?\"|\":\"\"}%(\ %t\ %)%{(&modified||!&modifiable)?\"|\":\"\"}%(\ %M\ %)%#LightlineLeft_active_1_2#%#LightlineMiddle_active#%=%#LightlineRight_active_2_3#%#LightlineRight_active_2#%(\ %{&ff}\ %)%{1||1?\"|\":\"\"}%(\ %{&fenc!=#\"\"?&fenc:&enc}\ %)%{1?\"|\":\"\"}%(\ %{&ft!=#\"\"?&ft:\"no\ ft\"}\ %)%#LightlineRight_active_1_2#%#LightlineRight_active_1#%(\ %3p%%\ %)%#LightlineRight_active_0_1#%#LightlineRight_active_0#%(\ %3l:%-2v\ %)
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -868,12 +870,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 29) / 59)
+let s:l = 67 - ((45 * winheight(0) + 27) / 55)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
-normal! 0
+67
+normal! 05|
 wincmd w
 argglobal
 if bufexists('~/.myvimrc/.vimrc') | buffer ~/.myvimrc/.vimrc | else | edit ~/.myvimrc/.vimrc | endif
@@ -1010,7 +1012,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(4)
+setlocal statusline=%{lightline#link()}%#LightlineLeft_inactive_0#%(\ %t\ %)%#LightlineLeft_inactive_0_1#%#LightlineMiddle_inactive#%=%#LightlineRight_inactive_1_2#%#LightlineRight_inactive_1#%(\ %3p%%\ %)%#LightlineRight_inactive_0_1#%#LightlineRight_inactive_0#%(\ %3l:%-2v\ %)
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -1032,7 +1034,7 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 2 - ((1 * winheight(0) + 14) / 29)
+let s:l = 2 - ((1 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -1174,7 +1176,7 @@ setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
 setlocal spelllang=en
-setlocal statusline=%!airline#statusline(5)
+setlocal statusline=%{lightline#link()}%#LightlineLeft_inactive_0#%(\ %t\ %)%#LightlineLeft_inactive_0_1#%#LightlineMiddle_inactive#%=%#LightlineRight_inactive_1_2#%#LightlineRight_inactive_1#%(\ %3p%%\ %)%#LightlineRight_inactive_0_1#%#LightlineRight_inactive_0#%(\ %3l:%-2v\ %)
 setlocal suffixesadd=
 setlocal swapfile
 setlocal synmaxcol=3000
@@ -1196,20 +1198,21 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 9 - ((8 * winheight(0) + 14) / 29)
+let s:l = 9 - ((7 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 9
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 59 + 119) / 238)
-exe 'vert 2resize ' . ((&columns * 59 + 119) / 238)
-exe 'vert 3resize ' . ((&columns * 59 + 119) / 238)
-exe '4resize ' . ((&lines * 29 + 31) / 62)
-exe 'vert 4resize ' . ((&columns * 58 + 119) / 238)
-exe '5resize ' . ((&lines * 29 + 31) / 62)
-exe 'vert 5resize ' . ((&columns * 58 + 119) / 238)
+3wincmd w
+exe 'vert 1resize ' . ((&columns * 52 + 105) / 211)
+exe 'vert 2resize ' . ((&columns * 52 + 105) / 211)
+exe 'vert 3resize ' . ((&columns * 52 + 105) / 211)
+exe '4resize ' . ((&lines * 27 + 29) / 58)
+exe 'vert 4resize ' . ((&columns * 52 + 105) / 211)
+exe '5resize ' . ((&lines * 27 + 29) / 58)
+exe 'vert 5resize ' . ((&columns * 52 + 105) / 211)
 tabnext 1
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
