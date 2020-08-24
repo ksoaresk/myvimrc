@@ -40,9 +40,19 @@ endif
 
 " colorscheme OceanicNext
 " colorscheme solarized8
-colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme solarized
 " colorscheme dracula
+
+if strftime("%H") < 6 + 0
+	colorscheme solarized8
+elseif strftime("%H") < 12 + 0
+	colorscheme dracula
+elseif strftime("%H") < 18 + 0
+	colorscheme OceanicNext
+else
+	colorscheme gruvbox
+endif
 
 let g:solarized_termcolors=256
 let g:oceanic_next_terminal_bold   = 1
