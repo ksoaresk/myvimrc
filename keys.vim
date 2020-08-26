@@ -1,6 +1,6 @@
 " Mapeamento de Teclas 
 let mapleader="\<space>"
-nnoremap <leader>; A;<ESC>
+nnoremap <leader><space> A;<ESC>
 
 map <F5>                      : source ~/.vimrc <CR>
 map <c-F5>                    : PluginInstall <CR>
@@ -37,3 +37,18 @@ inoremap <leader>exco <C-R>=strftime('%s') <CR>
 " Configura atalho para executar phpunit
 nmap  <S-F2>                    :!make unit-test <CR>
 imap  <S-F2><ESC>               : !make unit-test <CR>
+
+" ATALHOS PARA PHP REFACTOR ----------------------
+" nnoremap <unique> <Leader>rlv :call PhpRenameLocalVariable()<CR>
+" nnoremap <unique> <Leader>rcv :call PhpRenameClassVariable()<CR>
+" nnoremap <unique> <Leader>rm :call PhpRenameMethod()<CR>
+" nnoremap <unique> <Leader>eu :call PhpExtractUse()<CR>
+" vnoremap <unique> <Leader>ec :call PhpExtractConst()<CR>
+" nnoremap <unique> <Leader>ep :call PhpExtractClassProperty()<CR>
+" vnoremap <unique> <Leader>em :call PhpExtractMethod()<CR>
+" nnoremap <unique> <Leader>np :call PhpCreateProperty()<CR>
+" nnoremap <unique> <Leader>du :call PhpDetectUnusedUseStatements()<CR>
+" vnoremap <unique> <Leader>== :call PhpAlignAssigns()<CR>
+" nnoremap <unique> <Leader>sg :call PhpCreateSettersAndGetters()<CR>
+" nnoremap <unique> <Leader>cog :call PhpCreateGetters()<CR>
+" nnoremap <unique> <Leader>da :call PhpDocAll()<CR>

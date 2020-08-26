@@ -29,6 +29,7 @@ set updatetime=250
 set visualbell
 set wildmenu
 
+" Verifica se as configuração estão no neovim
 if has("nvim")
   set inccommand=split
 endif
@@ -45,7 +46,8 @@ endif
 " colorscheme dracula
 
 if strftime("%H") < 6 + 0
-	colorscheme solarized8
+	set background=light
+	colorscheme OceanicNext
 elseif strftime("%H") < 12 + 0
 	colorscheme dracula
 elseif strftime("%H") < 18 + 0
@@ -72,8 +74,8 @@ let g:airline_powerline_fonts = 1
 
 " Ultil snippets
 let g:UltiSnipsExpandTrigger       = "<tab>"
-let g:UltiSnipsJumpForwardTrigger  = "<c-b>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
+let g:UltiSnipsJumpForwardTrigger  = "<c-n>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 let g:UltiSnipsEditSplit           = "vertical"
 let g:UltiSnipsSnippetsDir         = "~/.vim/bundle/ultisnips/"
 
@@ -150,3 +152,8 @@ let NERDTreeShowHidden = 1
 " Configuração do cursor-------------------------- 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
+
+
+" SUPERTAB ------------------------------------------
+" let g:SuperTabDefaultCompletionType = "<c-p>"
+" let g:SuperTabContextDefaultCompletionType = "<c-p>"

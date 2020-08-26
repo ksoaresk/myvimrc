@@ -34,6 +34,10 @@ call vundle#begin()
 	Plugin 'stephpy/vim-php-cs-fixer'
 	Plugin 'adoy/vim-php-refactoring-toolbox'
 	Plugin 'tobyS/pdv'
+	Plugin 'phpactor/phpactor'
+	Plugin 'ncm2/ncm2'
+	Plugin 'roxma/nvim-yarp'
+	Plugin 'phpactor/ncm2-phpactor'
 
 	" Themes
 	Plugin 'morhetz/gruvbox'
@@ -49,3 +53,7 @@ call vundle#begin()
 	Plugin 'ryanoasis/vim-devicons'
 
 call vundle#end() 
+
+
+autocmd BufEnter * call ncm2#enable_for_buffer()
+set completeopt=noinsert,menuone,noselect
