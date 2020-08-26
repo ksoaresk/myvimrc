@@ -51,9 +51,9 @@ if strftime("%H") < 6 + 0
 elseif strftime("%H") < 12 + 0
 	colorscheme dracula
 elseif strftime("%H") < 18 + 0
-	colorscheme OceanicNext
-else
 	colorscheme gruvbox
+else
+	colorscheme OceanicNext
 endif
 
 let g:solarized_termcolors=256

@@ -33,6 +33,12 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tobyS/pdv' 
 	Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
 
+	" Frontend
+	" Plug 'storyn26383/vim-vue'
+	" Plug 'pangloss/vim-javascript'
+	Plug 'leafoftree/vim-vue-plugin'
+	Plug 'iloginow/vim-stylus'
+
 if has("nvim") 
 
 	Plug 'ncm2/ncm2'
@@ -51,12 +57,13 @@ if has("nvim")
 
 endif
 
-	" qqqThemes
+	" Themes
 	Plug 'morhetz/gruvbox'
 	Plug 'mhartington/oceanic-next'
 	Plug 'dracula/vim', { 'name': 'dracula' }
 	Plug 'lifepillar/vim-solarized8'
 	Plug 'altercation/vim-colors-solarized'
+	Plug 'dunstontc/vim-vscode-theme'
 
 	" Airline
 	Plug 'Lokaltog/vim-powerline'
