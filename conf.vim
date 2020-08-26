@@ -77,7 +77,7 @@ let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-n>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 let g:UltiSnipsEditSplit           = "vertical"
-let g:UltiSnipsSnippetsDir         = "~/.vim/bundle/ultisnips/"
+let g:UltiSnipsSnippetsDir         = "~/.vim/plugged/ultisnips/"
 
 " GIT
 let g:gitgutter_sign_modified = '>'
@@ -149,11 +149,13 @@ let NERDTreeShowHidden = 1
 "" close vim if the only window left open is a NERDTree
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Configuração do cursor-------------------------- 
+" Configuração do cursor ----------------------------
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
-
 
 " SUPERTAB ------------------------------------------
 " let g:SuperTabDefaultCompletionType = "<c-p>"
 " let g:SuperTabContextDefaultCompletionType = "<c-p>"
+
+" Configuração NCM ----------------------------------
+set completeopt=noinsert,menuone,noselect 

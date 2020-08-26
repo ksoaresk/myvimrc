@@ -74,4 +74,6 @@ let g:vim_php_refactoring_default_method_visibility = 'private'
 " let g:phpunit_srcroot = '~/workspace/agilize-rh-api/tests'
 " let g:phpunit_options = ["--stop-on-failure"]
 
-let g:pdv_template_dir = "~/.vim/bundle/pdv/templates_snip"
+let g:pdv_template_dir = "~/.vim/plugged/pdv/templates_snip"
+
+let g:phpactorPhpBin = "/usr/bin/php7.4"

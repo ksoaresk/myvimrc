@@ -1,6 +1,8 @@
 " Mapeamento de Teclas 
 let mapleader="\<space>"
 nnoremap <leader><space> A;<ESC>
+nnoremap <leader>=> A => 
+nnoremap <leader>, A,<ESC>
 
 map <F5>                      : source ~/.vimrc <CR>
 map <c-F5>                    : PluginInstall <CR>

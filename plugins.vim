@@ -1,59 +1,67 @@
-set rtp+=~/.vim/bundle/Vundle.vim 
-call vundle#begin()
-
-	Plugin 'VundleVim/Vundle.vim'
+call plug#begin('~/.vim/plugged')
 
 	" Essenciais.
-	" Plugin 'kien/ctrlp.vim'                        " Pesquisa e abertura de arquivos
-	Plugin 'scrooloose/nerdtree'                                        " Barra lateral para navegação de arquivos
-	Plugin 'ivalkeen/nerdtree-execute'               " Executar arquivos de dentro do nerdtree
-	Plugin 'godlygeek/tabular'                       " Vim tabular para tabulações
-	Plugin 'tomtom/tcomment_vim'                     " Para comentar trechos de códgios
-	Plugin 'jiangmiao/auto-pairs'                    " Adiciona itens de fechamento automáticos como chaves, parenteses, colchetes e outros.
-	Plugin 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Pesquisa com fuzzificador
-	Plugin 'junegunn/fzf.vim'
-	Plugin 'airblade/vim-gitgutter'                  " Git plugin
-	Plugin 'tpope/vim-fugitive'                      " Git
-	" Plugin 'c9s/phpunit.vim'
+	" Plug 'kien/ctrlp.vim'                        " Pesquisa e abertura de arquivos
+	Plug 'scrooloose/nerdtree'                                        " Barra lateral para navegação de arquivos
+	Plug 'ivalkeen/nerdtree-execute'               " Executar arquivos de dentro do nerdtree
+	Plug 'godlygeek/tabular'                       " Vim tabular para tabulações
+	Plug 'tomtom/tcomment_vim'                     " Para comentar trechos de códgios
+	Plug 'jiangmiao/auto-pairs'                    " Adiciona itens de fechamento automáticos como chaves, parenteses, colchetes e outros.
+	Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Pesquisa com fuzzificador
+	Plug 'junegunn/fzf.vim'
+	Plug 'airblade/vim-gitgutter'                  " Git plugin
+	Plug 'tpope/vim-fugitive'                      " Git
+	Plug 'c9s/phpunit.vim'
 
     " Codificação
-	Plugin 'ap/vim-css-color'                        " Emmet html e CSS
-	Plugin 'mattn/emmet-vim'                         " Emmet html e CSS
-	Plugin 'ervandew/supertab'                       " Super tab para autocompletes entre outros
-	Plugin 'terryma/vim-multiple-cursors'            " Vim multiplos cursores
-	Plugin 'tpope/vim-surround'                      " Adiciona fechamentos
-	Plugin 'MarcWeber/vim-addon-mw-utils'
-	Plugin 'tomtom/tlib_vim'
-	Plugin 'garbas/vim-snipmate'
-	Plugin 'honza/vim-snippets'
-	Plugin 'SirVer/ultisnips'                        " gerenciamento e uso de snips
-	Plugin 'mileszs/ack.vim'                         " Refinamento da pesquisa
-	Plugin 'chrisbra/vim-xml-runtime'                " Tratamento e formatação de XML de forma dinamica
-	Plugin 'majutsushi/tagbar'                       " Navegador de estrutura
-	Plugin 'vim-syntastic/syntastic'                 " análise de sintaxe
-	Plugin 'stephpy/vim-php-cs-fixer'
-	Plugin 'adoy/vim-php-refactoring-toolbox'
-	Plugin 'tobyS/pdv'
-	Plugin 'phpactor/phpactor'
-	Plugin 'ncm2/ncm2'
-	Plugin 'roxma/nvim-yarp'
-	Plugin 'phpactor/ncm2-phpactor'
+	Plug 'ap/vim-css-color'                        " Emmet html e CSS
+	Plug 'mattn/emmet-vim'                         " Emmet html e CSS
+	Plug 'ervandew/supertab'                       " Super tab para autocompletes entre outros
+	Plug 'terryma/vim-multiple-cursors'            " Vim multiplos cursores
+	Plug 'tpope/vim-surround'                      " Adiciona fechamentos
+	Plug 'MarcWeber/vim-addon-mw-utils'
+	Plug 'tomtom/tlib_vim'
+	Plug 'garbas/vim-snipmate'
+	Plug 'honza/vim-snippets'
+	Plug 'SirVer/ultisnips'                        " gerenciamento e uso de snips
+	Plug 'mileszs/ack.vim'                         " Refinamento da pesquisa
+	Plug 'chrisbra/vim-xml-runtime'                " Tratamento e formatação de XML de forma dinamica
+	Plug 'majutsushi/tagbar'                       " Navegador de estrutura
+	Plug 'vim-syntastic/syntastic'                 " análise de sintaxe
+	Plug 'stephpy/vim-php-cs-fixer'
+	Plug 'adoy/vim-php-refactoring-toolbox'
+	Plug 'tobyS/pdv' 
+	Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
 
-	" Themes
-	Plugin 'morhetz/gruvbox'
-	Plugin 'mhartington/oceanic-next'
-	Plugin 'dracula/vim', { 'name': 'dracula' }
-	Plugin 'lifepillar/vim-solarized8'
-	Plugin 'altercation/vim-colors-solarized'
+if has("nvim") 
+
+	Plug 'ncm2/ncm2'
+	Plug 'ncm2/ncm2-bufword'
+	Plug 'ncm2/ncm2-html-subscope'
+	Plug 'ncm2/ncm2-markdown-subscope'
+	Plug 'ncm2/ncm2-path'
+	Plug 'ncm2/ncm2-tern'
+	Plug 'ncm2/ncm2-vim'
+	Plug 'phpactor/ncm2-phpactor'
+	Plug 'roxma/nvim-yarp'
+	Plug 'mhartington/nvim-typescript'
+	
+	autocmd BufEnter * call ncm2#enable_for_buffer()
+	set completeopt=noinsert,menuone,noselect
+
+endif
+
+	" qqqThemes
+	Plug 'morhetz/gruvbox'
+	Plug 'mhartington/oceanic-next'
+	Plug 'dracula/vim', { 'name': 'dracula' }
+	Plug 'lifepillar/vim-solarized8'
+	Plug 'altercation/vim-colors-solarized'
 
 	" Airline
-	Plugin 'Lokaltog/vim-powerline'
-	Plugin 'vim-airline/vim-airline'
-	Plugin 'vim-airline/vim-airline-themes'
-	Plugin 'ryanoasis/vim-devicons'
+	Plug 'Lokaltog/vim-powerline'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'ryanoasis/vim-devicons'
 
-call vundle#end() 
-
-
-autocmd BufEnter * call ncm2#enable_for_buffer()
-set completeopt=noinsert,menuone,noselect
+call plug#end()
