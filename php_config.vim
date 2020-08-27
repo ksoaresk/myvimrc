@@ -78,3 +78,6 @@ let g:pdv_template_dir = "~/.vim/plugged/pdv/templates_snip"
 
 " PHPActor
 " let g:phpactorPhpBin = "/usr/bin/php7.4"
+
+" CocVim config
+let g:coc_disable_startup_warning = 1
