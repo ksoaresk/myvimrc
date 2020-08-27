@@ -31,30 +31,28 @@ call plug#begin('~/.vim/plugged')
 	Plug 'stephpy/vim-php-cs-fixer'
 	Plug 'adoy/vim-php-refactoring-toolbox'
 	Plug 'tobyS/pdv' 
-	Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
+	" Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'}
 
-	" Frontend
-	" Plug 'storyn26383/vim-vue'
-	" Plug 'pangloss/vim-javascript'
-	Plug 'leafoftree/vim-vue-plugin'
-	Plug 'iloginow/vim-stylus'
 
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
 if has("nvim") 
 
-	Plug 'ncm2/ncm2'
-	Plug 'ncm2/ncm2-bufword'
-	Plug 'ncm2/ncm2-html-subscope'
-	Plug 'ncm2/ncm2-markdown-subscope'
-	Plug 'ncm2/ncm2-path'
-	Plug 'ncm2/ncm2-tern'
-	Plug 'ncm2/ncm2-vim'
-	Plug 'phpactor/ncm2-phpactor'
-	Plug 'roxma/nvim-yarp'
-	Plug 'mhartington/nvim-typescript'
+	" CocNeoVim
 	
-	autocmd BufEnter * call ncm2#enable_for_buffer()
-	set completeopt=noinsert,menuone,noselect
-
+" 	Plug 'ncm2/ncm2'
+" 	Plug 'ncm2/ncm2-bufword'
+" 	Plug 'ncm2/ncm2-html-subscope'
+" 	Plug 'ncm2/ncm2-markdown-subscope'
+" 	Plug 'ncm2/ncm2-path'
+" 	Plug 'ncm2/ncm2-tern'
+" 	Plug 'ncm2/ncm2-vim'
+" 	Plug 'phpactor/ncm2-phpactor'
+" 	Plug 'roxma/nvim-yarp'
+" 	Plug 'mhartington/nvim-typescript'
+" 	
+" 	autocmd BufEnter * call ncm2#enable_for_buffer()
+" 	set completeopt=noinsert,menuone,noselect
+"
 endif
 
 	" Themes

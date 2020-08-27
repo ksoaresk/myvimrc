@@ -77,4 +77,4 @@ let g:vim_php_refactoring_default_method_visibility = 'private'
 let g:pdv_template_dir = "~/.vim/plugged/pdv/templates_snip"
 
 " PHPActor
-let g:phpactorPhpBin = "/usr/bin/php7.4"
+" let g:phpactorPhpBin = "/usr/bin/php7.4"
