@@ -158,4 +158,4 @@ let &t_EI = "\e[2 q"
 " let g:SuperTabContextDefaultCompletionType = "<c-p>"
 
 " Configuração NCM ----------------------------------
-set completeopt=noinsert,menuone,noselect 
+" set completeopt=noinsert,menuone,noselect 

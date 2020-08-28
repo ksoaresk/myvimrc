@@ -32,27 +32,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'adoy/vim-php-refactoring-toolbox'
 	Plug 'tobyS/pdv' 
 	Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'} 
-	" CocNeoVim
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-if has("nvim") 
-
-	
-	Plug 'ncm2/ncm2'
-	Plug 'ncm2/ncm2-bufword'
-	Plug 'ncm2/ncm2-html-subscope'
-	Plug 'ncm2/ncm2-markdown-subscope'
-	Plug 'ncm2/ncm2-path'
-	Plug 'ncm2/ncm2-tern'
-	Plug 'ncm2/ncm2-vim'
-	Plug 'phpactor/ncm2-phpactor'
-	Plug 'roxma/nvim-yarp'
-	Plug 'mhartington/nvim-typescript'
-
-	autocmd BufEnter * call ncm2#enable_for_buffer()
-	set completeopt=noinsert,menuone,noselect
-
-endif
+	Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 
 	" Themes
 	Plug 'morhetz/gruvbox'
