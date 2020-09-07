@@ -79,10 +79,12 @@ let g:UltiSnipsJumpBackwardTrigger = "<c-p>"
 let g:UltiSnipsEditSplit           = "vertical"
 let g:UltiSnipsSnippetsDir         = "~/.vim/plugged/ultisnips/"
 
-" GIT
+" GIT------------------------------------------------------------
 let g:gitgutter_sign_modified = '>'
-nmap <Leader>n :GitGutterNextHunk<CR>
-nmap <Leader>p :GitGutterPrevHunk<CR>
+nnoremap <Leader>n :GitGutterNextHunk<CR>
+nnoremap <Leader>p :GitGutterPrevHunk<CR> 
+" Git Fugitive---------------------------------------------------
+nnoremap <leader>gb :Gblame<CR>
 
 " FZF
 function! s:fzf_statusline()

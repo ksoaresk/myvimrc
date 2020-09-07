@@ -4,6 +4,7 @@ nnoremap <leader>; A;<ESC>
 nnoremap <leader>=> A => 
 nnoremap <leader>, A,<ESC>
 nnoremap <leader>{ A{<ESC>
+nnoremap <leader>bn :bn<CR>
 
 map <F5>                      : source ~/.vimrc <CR>
 map <c-F5>                    : PluginInstall <CR>
