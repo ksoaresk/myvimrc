@@ -34,17 +34,36 @@ case "$1" in
 		;;
 esac
 
-if [ ! -d ~/.vim/bundle/Vundle.vim ]
+if [ ! -d ~/.vim/plugged ];
 then
-	git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
 
-if [ ! -d ~/.config/nvim ]
+if [ ! -d ~/.config/nvim ];
 then
 	sudo apt-get install -y neovim
 fi
 
-cp -rf init.vim ~/.config/nvim/ 
+rm -rf ~/.config/nvim/init.vim
+ln -S ~/.config/nvim/init.vim ~/.myvimrc/.vimrc
 
-echo -e "Configuração realizada com sucesso.\n
-	Agora abra o seu nvim e digite no modo normal \033[01;32m:PluginInstall\033[01;37!"
+echo -e "Configuração NVIM realizada com sucesso.\n
+	Agora abra o seu NVIM e digite no modo normal \033[01;32m:PlugInstall\033[01;37!"
+
+	
+rm -rf ~/.vimrc
+ln -S ~/.vimrc ~/.myvimrc/.vimrc
+
+echo -e "Configuração VIM realizada com sucesso.\n
+	Agora abra o seu VIM e digite no modo normal \033[01;32m:PlugInstall\033[01;37!"
+
+rm -rf ~/.ideavim
+ln -S ~/.ideavim ~/.myvimrc/.ideavim
+
+echo -e "Configuração IDEAVIM realizada com sucesso." \n
+
+rm -rf ~/.zshrc
+ln -S ~/.zshrc ~/.myvimrc/.zshrc
+
+echo -e "Configuração ZSH realizada com sucesso." \n
