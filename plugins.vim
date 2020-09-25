@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 	" Essenciais.
 	" Plug 'kien/ctrlp.vim'                        " Pesquisa e abertura de arquivos
@@ -13,7 +13,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'tpope/vim-fugitive'                      " Git
 	Plug 'c9s/phpunit.vim'
 
-    " Codificação
+	" Codificação
 	Plug 'ap/vim-css-color'                        " Emmet html e CSS
 	Plug 'mattn/emmet-vim'                         " Emmet html e CSS
 	Plug 'ervandew/supertab'                       " Super tab para autocompletes entre outros
@@ -48,4 +48,4 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'ryanoasis/vim-devicons'
 
-call plug#end()
+call plug#end() 

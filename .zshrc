@@ -10,6 +10,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="avit"
+# ZSH_THEME="spaceship"
 stty -ixon
 
 # Set list of themes to pick from when loading at random
@@ -71,7 +72,7 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-
+# zsh-autosuggestions zsh-syntax-highlighting
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
