@@ -1,8 +1,10 @@
 let mapleader="\<space>"
-nnoremap <leader>; A;<ESC>
+nnoremap <leader>; A; <ESC>
+nnoremap <leader>: A:
 nnoremap <leader>=> A =>
 nnoremap <leader>, A,<ESC>
 nnoremap <leader>{ A{<ESC>
+nnoremap <leader>) A)<ESC>
 
 set visualbell
 set relativenumber
@@ -10,3 +12,6 @@ set incsearch
 set hlsearch
 set ignorecase
 
+" set clipboard=unnamedplus
+
+" let @a=ggyG
