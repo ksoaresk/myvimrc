@@ -28,6 +28,7 @@ set ts=4
 set updatetime=250
 set visualbell
 set wildmenu
+set clipboard=unnamedplus
 
 " Verifica se as configuração estão no neovim
 if has("nvim")
