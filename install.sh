@@ -86,5 +86,7 @@ echo "ZSH: Plugin Hilight"
 
 rm -rf ~/.tmux.conf
 ln -S ~/.tmux.conf ~/.myvimrc/.tmux.conf
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux source ~/.tmux.conf
 
-echo -e "Configuração ZSH realizada com sucesso." 
+echo -e "Configuração do TMUX executada com sucesso." 
