@@ -40,22 +40,23 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-" colorscheme OceanicNext
+colorscheme OceanicNext
 " colorscheme solarized8
 " colorscheme gruvbox
 " colorscheme solarized
 " colorscheme dracula
 
-if strftime("%H") < 6 + 0
-	set background=light
-	colorscheme OceanicNext
-elseif strftime("%H") < 12 + 0
-	colorscheme dracula
-elseif strftime("%H") < 18 + 0
-	colorscheme gruvbox
-else
-	colorscheme OceanicNext
-endif
+" Define o tema com base no horário
+" if strftime("%H") < 6 + 0
+" 	set background=light
+" 	colorscheme OceanicNext
+" elseif strftime("%H") < 12 + 0
+" 	colorscheme dracula
+" elseif strftime("%H") < 18 + 0
+" 	colorscheme gruvbox
+" else
+" 	colorscheme OceanicNext
+" endif
 
 let g:solarized_termcolors=256
 let g:oceanic_next_terminal_bold   = 1
