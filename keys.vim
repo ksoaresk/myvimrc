@@ -28,7 +28,7 @@ nnoremap <C-s> <ESC>    : w! <CR>
 nnoremap <C-q> <ESC>    : q! <CR>
 nnoremap <C-e>          : tabclose <CR>
 nnoremap <S-t>          : tabnew <CR>
-nnoremap <S-tab>        : bn <CR>
+nnoremap <S-tab>        : tabnext <CR>
 nnoremap <C-PageDown>   : bc <CR>
 inoremap <C-s> <ESC>    : w! <CR>
 

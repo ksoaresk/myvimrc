@@ -159,6 +159,7 @@ let &t_EI = "\e[2 q"
 " SUPERTAB ------------------------------------------
 " let g:SuperTabDefaultCompletionType = "<c-p>"
 " let g:SuperTabContextDefaultCompletionType = "<c-p>"
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 " Configuração NCM ----------------------------------
 set completeopt=noinsert,menuone,noselect 
