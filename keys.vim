@@ -21,14 +21,14 @@ imap  <F8><ESC>               : TagbarToggle <CR>
 " Teclas para navegação em buscas no conteúdos dos arquivos com `vimgrep! /expression/g dir|file.ext`
 map <F2>                : copen<CR>
 map <F3>                : cclose<CR>
-map <A-n>               : cnext<CR>
-map <A-p>               : cprevious<CR>
+nnoremap <leader>sn      : cnext<CR>
+nnoremap <leader>sp      : cprevious<CR>
 
 nnoremap <C-s> <ESC>    : w! <CR>
-nnoremap <C-q> <ESC>    : q! <CR>
+nnoremap <C-q> <ESC>    : bd! <CR>
 nnoremap <C-e>          : tabclose <CR>
 nnoremap <S-t>          : tabnew <CR>
-nnoremap <S-tab>        : tabnext <CR>
+nnoremap <S-tab>        : bn <CR>
 nnoremap <C-PageDown>   : bc <CR>
 inoremap <C-s> <ESC>    : w! <CR>
 
