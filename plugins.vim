@@ -35,15 +35,17 @@ call plug#begin()
 	Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 
 	"JavaScript
-	Plug 'epilande/vim-es2015-snippets'
 	Plug 'jparise/vim-graphql'        
 	Plug 'leafgarland/typescript-vim'
 	Plug 'maxmellon/vim-jsx-pretty' 
-	Plug 'pangloss/vim-javascript' 
 	Plug 'peitalin/vim-jsx-typescript'
 	Plug 'tasn/vim-tsx'
 	Plug 'yuezk/vim-js'
 	Plug 'epilande/vim-react-snippets'
+	Plug 'Valloric/MatchTagAlways'
+	
+	" Golang
+	Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 	" Themes
 	Plug 'morhetz/gruvbox'

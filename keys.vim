@@ -6,8 +6,8 @@ nnoremap <leader>, A,<ESC>
 nnoremap <leader>{ A{<ESC>
 nnoremap <leader>bn :bn<CR>
 
-map <F5>                      : source ~/.vimrc <CR>
-map <c-F5>                    : PluginInstall <CR>
+map <F5>                      :source ~/.vimrc <CR>
+map <c-F5>                    :PluginInstall <CR>
 " map <F12>                     : !ctags -R expand("%:p") <CR>
 
 " Navegação nos arquivos NerdTree
@@ -28,7 +28,7 @@ nnoremap <C-s> <ESC>    : w! <CR>
 nnoremap <C-q> <ESC>    : bd! <CR>
 nnoremap <C-e>          : tabclose <CR>
 nnoremap <S-t>          : tabnew <CR>
-nnoremap <S-tab>        : bn <CR>
+nnoremap <S-tab>        : tabnext <CR>
 nnoremap <C-PageDown>   : bc <CR>
 inoremap <C-s> <ESC>    : w! <CR>
 
