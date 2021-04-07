@@ -40,9 +40,9 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-colorscheme OceanicNext
+" colorscheme OceanicNext
 " colorscheme solarized8
-" colorscheme gruvbox
+colorscheme gruvbox
 " colorscheme solarized
 " colorscheme dracula
 

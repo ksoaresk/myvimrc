@@ -8,7 +8,6 @@ nnoremap <leader>bn :bn<CR>
 
 map <F5>                      :source ~/.vimrc <CR>
 map <c-F5>                    :PluginInstall <CR>
-" map <F12>                     : !ctags -R expand("%:p") <CR>
 
 " Navegação nos arquivos NerdTree
 nmap <F7>                     : NERDTreeToggle <CR>
@@ -32,15 +31,16 @@ nnoremap <S-tab>        : tabnext <CR>
 nnoremap <C-PageDown>   : bc <CR>
 inoremap <C-s> <ESC>    : w! <CR>
 
+" Comandos para FZF
 nnoremap <silent> <C-p> : Files <CR>
 nnoremap <silent> <C-i> : FZF <CR>
 
 inoremap <F9> <C-R>=strftime('%s') <CR> 
 inoremap <leader>exco <C-R>=strftime('%s') <CR> 
 
-" Configura atalho para executar phpunit
-nmap  <S-F2>                    :!make unit-test <CR>
-imap  <S-F2><ESC>               : !make unit-test <CR>
+" Atalhos para o GIT
+inoremap <leader>dff <ESC> :Gdiff<CR> " Git Diff in insertion mode
+nnoremap <leader>dff :Gdiff<CR> " Git Diff in normal mode
 
 " ATALHOS PARA PHP REFACTOR ----------------------
 " nnoremap <unique> <Leader>rlv :call PhpRenameLocalVariable()<CR>
