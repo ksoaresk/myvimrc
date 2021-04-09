@@ -38,9 +38,14 @@ nnoremap <silent> <C-i> : FZF <CR>
 inoremap <F9> <C-R>=strftime('%s') <CR> 
 inoremap <leader>exco <C-R>=strftime('%s') <CR> 
 
-" Atalhos para o GIT
+" GIT------------------------------------------------------------
+let g:gitgutter_sign_modified = '>'
+nnoremap <Leader>n :GitGutterNextHunk<CR>
+nnoremap <Leader>p :GitGutterPrevHunk<CR> 
 inoremap <leader>dff <ESC> :Gdiff<CR> " Git Diff in insertion mode
 nnoremap <leader>dff :Gdiff<CR> " Git Diff in normal mode
+" Git Fugitive---------------------------------------------------
+nnoremap <leader>gb :Gblame<CR>
 
 " ATALHOS PARA PHP REFACTOR ----------------------
 " nnoremap <unique> <Leader>rlv :call PhpRenameLocalVariable()<CR>

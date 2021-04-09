@@ -25,6 +25,9 @@ set sw=4
 set t_Co=256
 set t_vb=
 set ts=4
+set noexpandtab
+set shiftwidth=4
+set softtabstop=0
 set updatetime=250
 set visualbell
 set wildmenu
@@ -40,9 +43,9 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-" colorscheme OceanicNext
+colorscheme OceanicNext
 " colorscheme solarized8
-colorscheme gruvbox
+" colorscheme gruvbox
 " colorscheme solarized
 " colorscheme dracula
 
@@ -80,13 +83,6 @@ let g:UltiSnipsJumpForwardTrigger  = "<c-b>"
 let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
 let g:UltiSnipsEditSplit           = "vertical"
 let g:UltiSnipsSnippetsDir         = "~/.vim/plugged/ultisnips/"
-
-" GIT------------------------------------------------------------
-let g:gitgutter_sign_modified = '>'
-nnoremap <Leader>n :GitGutterNextHunk<CR>
-nnoremap <Leader>p :GitGutterPrevHunk<CR> 
-" Git Fugitive---------------------------------------------------
-nnoremap <leader>gb :Gblame<CR>
 
 " FZF
 function! s:fzf_statusline()
@@ -137,9 +133,6 @@ let g:airline_symbols.dirty='⚡'
 
 
 " NerdTree
-" Dicas
-" O NERDTree pode abrir os arquivos em abas e ainda dividir a tela.
-" Mudar o foco: Para mudar o foco, pressione CTRL w + direção. A direção pode ser com as teclas hjkl ou as teclas direcionais. CTRL w + CTRL w (isso mesmo, 2 vezes) chaveia entre as janelas.
 " Abrir o arquivo na mesma tela, dividindo na horizontal: Selecione o arquivo no NERDTree e pressione “i”
 " Abrir o arquivo na mesma tela, dividindo na vertical: Selecione o arquivo no NERDTree e pressione “s”
 " Abrir o arquivo em outra aba: Selecione o arquivo no NERDTree e pressione “t”
