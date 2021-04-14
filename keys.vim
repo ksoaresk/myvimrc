@@ -1,4 +1,3 @@
-" Mapeamento de Teclas 
 let mapleader="\<space>"
 nnoremap <leader>; A;<ESC>
 nnoremap <leader>=> A => 
@@ -9,11 +8,13 @@ nnoremap <leader>bf :bf<CR>
 nnoremap <leader>bl :bl<CR>
 nnoremap <leader>bd :bd<CR>
 
-" noremap <80><fc>^H:normal ddjp<CR>
-noremap <80>ü^Hk:normal ddkP<CR> 
+nnoremap <M-Up> ddkP
+nnoremap <M-k> ddkP
+nnoremap <M-Down> ddp
+nnoremap <M-j> ddp
 
-map <F5>                      :source ~/.vimrc <CR>
-map <c-F5>                    :PluginInstall <CR>
+map <F5>   :source ~/.vimrc <CR>
+map <c-F5> :PluginInstall <CR>
 
 " Navegação nos arquivos NerdTree
 nmap <F7>                     : NERDTreeToggle <CR>
