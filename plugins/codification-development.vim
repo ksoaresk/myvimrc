@@ -18,7 +18,6 @@ Plug 'adoy/vim-php-refactoring-toolbox'
 Plug 'tobyS/pdv' 
 Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'} 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
-Plug 'c9s/phpunit.vim' 
 
 "JavaScript
 Plug 'jparise/vim-graphql'        

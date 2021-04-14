@@ -5,6 +5,12 @@ nnoremap <leader>=> A =>
 nnoremap <leader>, A,<ESC>
 nnoremap <leader>{ A{<ESC>
 nnoremap <leader>bn :bn<CR>
+nnoremap <leader>bf :bf<CR>
+nnoremap <leader>bl :bl<CR>
+nnoremap <leader>bd :bd<CR>
+
+" noremap <80><fc>^H:normal ddjp<CR>
+noremap <80>ü^Hk:normal ddkP<CR> 
 
 map <F5>                      :source ~/.vimrc <CR>
 map <c-F5>                    :PluginInstall <CR>

@@ -32,6 +32,7 @@ set updatetime=250
 set visualbell
 set wildmenu
 set clipboard=unnamedplus
+set splitbelow
 
 " Verifica se as configuração estão no neovim
 if has("nvim")
@@ -43,9 +44,9 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-colorscheme OceanicNext
+" colorscheme OceanicNext
 " colorscheme solarized8
-" colorscheme gruvbox
+colorscheme gruvbox
 " colorscheme solarized
 " colorscheme dracula
 
