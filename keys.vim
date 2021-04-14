@@ -8,10 +8,10 @@ nnoremap <leader>bf :bf<CR>
 nnoremap <leader>bl :bl<CR>
 nnoremap <leader>bd :bd<CR>
 
-nnoremap <M-Up> ddkP
 nnoremap <M-k> ddkP
-nnoremap <M-Down> ddp
+nnoremap <M-Up> ddkP
 nnoremap <M-j> ddp
+nnoremap <M-Down> ddp
 
 map <F5>   :source ~/.vimrc <CR>
 map <c-F5> :PluginInstall <CR>
