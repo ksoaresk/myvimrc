@@ -33,11 +33,11 @@ set visualbell
 set wildmenu
 set clipboard=unnamedplus
 set splitbelow
-autocmd TermOpen * startinsert
 
 " Verifica se as configuração estão no neovim
 if has("nvim")
-  set inccommand=split
+	autocmd TermOpen * startinsert
+	set inccommand=split
 endif
 
 "----------- DEFINIÇÃO DE ESQUEMA DE CORES -----------
