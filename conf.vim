@@ -33,6 +33,7 @@ set visualbell
 set wildmenu
 set clipboard=unnamedplus
 set splitbelow
+autocmd TermOpen * startinsert
 
 " Verifica se as configuração estão no neovim
 if has("nvim")

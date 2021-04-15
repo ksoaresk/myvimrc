@@ -8,6 +8,9 @@ nnoremap <leader>bf :bf<CR>
 nnoremap <leader>bl :bl<CR>
 nnoremap <leader>bd :bd<CR>
 
+nnoremap <F12> <C-w>s:term<CR>
+nnoremap <C-+> <C-w><C-w>s:term<CR>
+
 nnoremap <M-k> ddkP
 nnoremap <M-Up> ddkP
 nnoremap <M-j> ddp
