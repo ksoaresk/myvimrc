@@ -34,6 +34,18 @@ case "$1" in
 		;;
 esac
 
+echo -e "Atualizando o sistema"
+sudo apt-get update
+
+echo -e "Instalando uuid-runtime"
+sudo apt-get install uuid-runtime -y
+
+echo -e "Instalando vim"
+sudo apt install vim
+
+echo -e "Instalando neovim" 
+sudo apt-get install neovim
+
 if [ ! -d ~/.vim/plugged ];
 then
 	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -49,8 +61,7 @@ fi
 rm -rf ~/.config/nvim/init.vim
 ln -S ~/.config/nvim/init.vim ~/.myvimrc/.vimrc
 
-echo -e "Configuração NVIM realizada com sucesso.
-	Agora abra o seu NVIM e digite no modo normal \033[01;32m:PlugInstall\033[01;37!"
+echo -e "Configuração NVIM realizada com sucesso. Agora abra o seu NVIM e digite no modo normal \033[01;32m:PlugInstall\033[01;37!"
 
 	
 rm -rf ~/.vimrc
