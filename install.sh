@@ -12,8 +12,8 @@
 
 readonly TEXT_HELP="Uso: $(basename ${0}) [-h | --help]\n\n
 	-h --help Mostra esta tela de ajuda\n
-	-v --version Mostra a versão da aplicação
-"
+	-v --version Mostra a versão da aplicação"
+
 case "$1" in
 	-h | --help)
 		echo -e $TEXT_HELP
@@ -38,13 +38,7 @@ echo -e "Atualizando o sistema"
 sudo apt-get update
 
 echo -e "Instalando uuid-runtime"
-sudo apt-get install uuid-runtime -y
-
-echo -e "Instalando vim"
-sudo apt install vim
-
-echo -e "Instalando neovim" 
-sudo apt-get install neovim
+sudo apt-get install uuid-runtime -y 
 
 if [ ! -d ~/.vim/plugged ];
 then
