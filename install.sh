@@ -1,10 +1,10 @@
 #!/bin/bash
+
 ####################################################################################################
 #																								   #
 # author Carlos Alberto<karloswebmaster@gmail.com												   #
 #																								   #
 # Este programa fará a instalação das configurações para uso no nvim                               #
-#																								   #
 # Version: 1 Versão inicial                                                                        #
 # Version: 2 -> Implementação do download do gerenciado de plugins Vunddle					       #
 #																								   #
