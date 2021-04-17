@@ -8,8 +8,13 @@ nnoremap <leader>bf :bf<CR>
 nnoremap <leader>bl :bl<CR>
 nnoremap <leader>bd :bd<CR>
 
-nnoremap <F12> <C-w>s:term<CR>
-nnoremap <C-+> <C-w><C-w>s:term<CR>
+" Atalhos para o Terminal
+nnoremap <F12> :sp \| term<CR>
+tnoremap <F12> <C-\><C-n>:q!<CR>
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
 
 nnoremap <M-k> ddkP
 nnoremap <M-Up> ddkP
