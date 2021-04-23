@@ -11,16 +11,19 @@ nnoremap <leader>bd :bd<CR>
 " Atalhos para o Terminal
 nnoremap <F12> :sp \| term<CR>
 tnoremap <F12> <C-\><C-n>:q!<CR>
-tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-k> <C-\><C-n><C-w>k
-tnoremap <C-l> <C-\><C-n><C-w>l
 
 " Mover linhas
 nnoremap <M-k> ddkP
 nnoremap <M-Up> ddkP
 nnoremap <M-j> ddp
-nnoremap <M-Down> ddp
+nnoremap <M-Down> ddp 
+noremap tt :tab split<CR>
+
+" Resize panel
+noremap <C-S-Up> :resize +2<CR>
+noremap <C-S-Down> :resize -2<CR>
+noremap <C-S-Right> :vertical resize +2<CR>
+noremap <C-S-Left> :vertical resize -2<CR>
 
 map <F5>   :source ~/.vimrc <CR>
 map <c-F5> :PluginInstall <CR>

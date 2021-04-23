@@ -176,3 +176,8 @@ hi tsxEqual guifg=#F99575
 
 " yellow
 hi tsxAttrib guifg=#F8BD7F cterm=italic
+
+" Configurações do lexima.vim 
+let g:indentguides_spacechar = '▏'
+let g:indentguides_tabchar = '▏'
+
