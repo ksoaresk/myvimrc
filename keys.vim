@@ -10,7 +10,7 @@ nnoremap <leader>bd :bd<CR>
 
 " Atalhos para o Terminal
 nnoremap <F12> :sp \| term<CR>
-tnoremap <F12> <C-\><C-n>:q!<CR>
+tnoremap <F12> <C-\><C-n>:q!<CR> 
 
 " Mover linhas
 nnoremap <M-k> ddkP
@@ -24,6 +24,9 @@ noremap <C-S-Up> :resize +2<CR>
 noremap <C-S-Down> :resize -2<CR>
 noremap <C-S-Right> :vertical resize +2<CR>
 noremap <C-S-Left> :vertical resize -2<CR>
+
+" Carregar Snippets com base na sintaxe
+inoremap <M-s> <ESC>:Snippets<CR>
 
 map <F5>   :source ~/.vimrc <CR>
 map <c-F5> :PluginInstall <CR>
@@ -40,22 +43,23 @@ imap  <F8><ESC>               : TagbarToggle <CR>
 map <F2>                : copen<CR>
 map <F3>                : cclose<CR>
 nnoremap <leader>sn      : cnext<CR>
-nnoremap <leader>sp      : cprevious<CR>
+nnoremap <leader>sp      : cprevious<CR> 
 
-nnoremap <C-s> <ESC>    : w! <CR>
-nnoremap <C-q> <ESC>    : bd! <CR>
-nnoremap <C-e>          : tabclose <CR>
-nnoremap <S-t>          : tabnew <CR>
-nnoremap <S-tab>        : tabnext <CR>
-nnoremap <C-PageDown>   : bc <CR>
-inoremap <C-s> <ESC>    : w! <CR>
+nnoremap <C-s> <ESC>:w! <CR>
+nnoremap <C-q> <ESC>:bd! <CR>
+nnoremap <C-e>          :tabclose <CR>
+nnoremap <S-t>          :tabnew <CR>
+nnoremap <S-tab>        :tabnext <CR>
+nnoremap <C-PageDown>   :bc <CR>
+inoremap <C-s> <ESC>:w! <CR>
+
 
 " Comandos para FZF
 nnoremap <silent> <C-p> : Files <CR>
 nnoremap <silent> <C-i> : FZF <CR>
 
-inoremap <F9> <C-R>=strftime('%s') <CR> 
-inoremap <leader>exco <C-R>=strftime('%s') <CR> 
+inoremap <F9> <C-R>=strftime('%s')<CR> 
+inoremap <leader>exco <C-R>=strftime('%s')<CR> 
 
 " GIT------------------------------------------------------------
 let g:gitgutter_sign_modified = '>'
