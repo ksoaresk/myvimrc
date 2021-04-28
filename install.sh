@@ -35,7 +35,8 @@ case "$1" in
 esac
 
 echo -e "Atualizando o sistema"
-sudo apt-get update
+sudo apt update && sudo apt upgrade -y
+sudo apt install powerline fonts-powerline -y
 
 echo -e "Instalando uuid-runtime"
 sudo apt-get install uuid-runtime -y 
