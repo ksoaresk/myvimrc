@@ -19,6 +19,7 @@ Plug 'tobyS/pdv'
 Plug 'phpactor/phpactor', {'for': 'php', 'branch': 'master', 'do': 'composer install --no-dev -o'} 
 Plug 'neoclide/coc.nvim', {'branch': 'release'} 
 Plug 'cohama/lexima.vim'
+Plug 'arnaud-lb/vim-php-namespace'
 
 "JavaScript
 Plug 'jparise/vim-graphql'        
