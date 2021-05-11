@@ -104,6 +104,4 @@ alias cb="xclip -selection clipboard"
 alias vi="nvim"
 alias vimrc="vi ~/.vimrc"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# [ -z "$TMUX" ] && { tmux attach || exec tmux new-session; }
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 

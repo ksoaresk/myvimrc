@@ -6,10 +6,8 @@ Plug 'terryma/vim-multiple-cursors'            " Vim multiplos cursores
 Plug 'tpope/vim-surround'                      " Adiciona fechamentos
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-" Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'SirVer/ultisnips'                        " gerenciamento e uso de snips
-Plug 'mileszs/ack.vim'                         " Refinamento da pesquisa
 Plug 'chrisbra/vim-xml-runtime'                " Tratamento e formatação de XML de forma dinamica
 Plug 'majutsushi/tagbar'                       " Navegador de estrutura
 Plug 'vim-syntastic/syntastic'                 " análise de sintaxe

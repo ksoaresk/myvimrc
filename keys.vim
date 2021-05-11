@@ -9,8 +9,20 @@ nnoremap <leader>bl :bl<CR>
 nnoremap <leader>bd :bd<CR>
 
 " Atalhos para o Terminal
+inoremap <F12> <ESC>:sp \| term<CR>
 nnoremap <F12> :sp \| term<CR>
 tnoremap <F12> <C-\><C-n>:q!<CR> 
+" tnoremap <C-S-K> <C-\><C-n><C-w>k
+" tnoremap <C-S-H> <C-\><C-n><C-w>j
+" tnoremap <C-S-L> <C-\><C-n><C-w>l
+" tnoremap <C-S-J> <C-\><C-n><C-w>j
+
+" Fold code blocks
+nnoremap <leader>fp vip:fold<CR>
+nnoremap <leader>f{ va{:fold<CR>
+nnoremap <leader>f} va}:fold<CR>
+nnoremap <leader>f[ va[:fold<CR>
+nnoremap <leader>f] va]:fold<CR>
 
 " Mover linhas
 nnoremap <M-k> ddkP
@@ -24,9 +36,6 @@ noremap <C-S-Up> :resize +2<CR>
 noremap <C-S-Down> :resize -2<CR>
 noremap <C-S-Right> :vertical resize +2<CR>
 noremap <C-S-Left> :vertical resize -2<CR>
-
-" Carregar Snippets com base na sintaxe
-inoremap <M-s> <ESC>:Snippets<CR>
 
 map <F5>   :source ~/.vimrc <CR>
 map <c-F5> :PluginInstall <CR>
@@ -53,10 +62,6 @@ nnoremap <S-tab>        :tabnext <CR>
 nnoremap <C-PageDown>   :bc <CR>
 inoremap <C-s> <ESC>:w! <CR>
 
-
-" Comandos para FZF
-nnoremap <silent> <C-p> : Files <CR>
-nnoremap <silent> <C-i> : FZF <CR>
 
 inoremap <F9> <C-R>=strftime('%s')<CR> 
 inoremap <leader>exco <C-R>=strftime('%s')<CR> 
