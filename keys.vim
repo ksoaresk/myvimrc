@@ -12,6 +12,7 @@ nnoremap <leader>bd :bd<CR>
 inoremap <F12> <ESC>:sp \| term<CR>
 nnoremap <F12> :sp \| term<CR>
 tnoremap <F12> <C-\><C-n>:q!<CR> 
+nnoremap <F9> :QuickRunExecute<CR>
 " tnoremap <C-S-K> <C-\><C-n><C-w>k
 " tnoremap <C-S-H> <C-\><C-n><C-w>j
 " tnoremap <C-S-L> <C-\><C-n><C-w>l
@@ -19,6 +20,7 @@ tnoremap <F12> <C-\><C-n>:q!<CR>
 
 " Fold code blocks
 nnoremap <leader>fp vip:fold<CR>
+nnoremap <leader>ft vit:fold<CR>
 nnoremap <leader>f{ va{:fold<CR>
 nnoremap <leader>f} va}:fold<CR>
 nnoremap <leader>f[ va[:fold<CR>
@@ -49,10 +51,10 @@ nmap  <F8>                    : TagbarToggle <CR>
 imap  <F8><ESC>               : TagbarToggle <CR>
 
 " Teclas para navegação em buscas no conteúdos dos arquivos com `vimgrep! /expression/g dir|file.ext`
-map <F2>                : copen<CR>
-map <F3>                : cclose<CR>
-nnoremap <leader>sn      : cnext<CR>
-nnoremap <leader>sp      : cprevious<CR> 
+map <F2> :copen<CR>
+map <F3> :cclose<CR>
+nnoremap <leader>sn :cnext<CR>
+nnoremap <leader>sp :cprevious<CR> 
 
 nnoremap <C-s> <ESC>:w! <CR>
 nnoremap <C-q> <ESC>:bd! <CR>
@@ -60,10 +62,8 @@ nnoremap <C-e>          :tabclose <CR>
 nnoremap <S-t>          :tabnew <CR>
 nnoremap <S-tab>        :tabnext <CR>
 nnoremap <C-PageDown>   :bc <CR>
-inoremap <C-s> <ESC>:w! <CR>
-
-
-inoremap <F9> <C-R>=strftime('%s')<CR> 
+inoremap <C-s> <ESC>:w! <CR> 
+" inoremap <F9> <C-R>=strftime('%s')<CR> 
 inoremap <leader>exco <C-R>=strftime('%s')<CR> 
 
 " GIT------------------------------------------------------------
@@ -88,4 +88,4 @@ nnoremap <leader>gb :Gblame<CR>
 " vnoremap <unique> <Leader>== :call PhpAlignAssigns()<CR>
 " nnoremap <unique> <Leader>sg :call PhpCreateSettersAndGetters()<CR>
 " nnoremap <unique> <Leader>cog :call PhpCreateGetters()<CR>
-" nnoremap <unique> <Leader>da :call PhpDocAll()<CR>
+" nnoremap <unique> <Leader>da :call PhpDocAll()<CR> 

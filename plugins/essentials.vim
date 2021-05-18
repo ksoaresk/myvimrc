@@ -11,3 +11,4 @@ Plug 'airblade/vim-gitgutter'                                     " Git plugin
 Plug 'tpope/vim-fugitive'                                         " Git
 Plug 'tpope/vim-eunuch'                                           " Reomeia e executa outras operações nos arquivos 
 Plug 'rking/ag.vim' 
+Plug 'huytd/vim-quickrun'
