@@ -61,7 +61,6 @@ nnoremap <C-q> <ESC>:bd! <CR>
 nnoremap <C-e>          :tabclose <CR>
 nnoremap <S-t>          :tabnew <CR>
 nnoremap <S-tab>        :tabnext <CR>
-nnoremap <C-PageDown>   :bc <CR>
 inoremap <C-s> <ESC>:w! <CR> 
 " inoremap <F9> <C-R>=strftime('%s')<CR> 
 inoremap <leader>exco <C-R>=strftime('%s')<CR> 

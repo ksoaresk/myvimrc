@@ -1,5 +1,5 @@
 " Essenciais.
-" Plug 'kien/ctrlp.vim'                                             " Pesquisa e abertura de arquivos
+" Plug 'kien/ctrlp.vim'                                             " Pesquisa e abertura de arquivos 
 Plug 'scrooloose/nerdtree'                                        " Barra lateral para navegação de arquivos
 Plug 'ivalkeen/nerdtree-execute'                                  " Executar arquivos de dentro do nerdtree
 Plug 'godlygeek/tabular'                                          " Vim tabular para tabulações
@@ -12,3 +12,4 @@ Plug 'tpope/vim-fugitive'                                         " Git
 Plug 'tpope/vim-eunuch'                                           " Reomeia e executa outras operações nos arquivos 
 Plug 'rking/ag.vim' 
 Plug 'huytd/vim-quickrun'
+Plug 'fadein/vim-FIGlet' 
