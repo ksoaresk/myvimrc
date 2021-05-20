@@ -33,7 +33,6 @@ let g:syntastic_php_phpmd_exec = './bin/phpmd'
 let g:syntastic_php_phpmd_post_args = 'cleancode,codesize,controversial,design,unusedcode'
 
 " PHP CS FIXER CONFIG
-" If php-cs-fixer is in $PATH, you don't need to define line below
 let g:php_cs_fixer_path = "~/.myvimrc/php-cs-fixer" " define the path to the php-cs-fixer.phar
 
 " If you use php-cs-fixer version 1.x

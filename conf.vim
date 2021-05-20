@@ -1,6 +1,5 @@
 syntax on
 
-" set background=light
 set background=dark
 set autoindent            
 set confirm
@@ -20,19 +19,19 @@ set relativenumber
 set showmatch
 set smartcase
 set smartindent           
-set softtabstop=4
-set sw=4
+set softtabstop=2
+set ts=2
+set sw=2
 set t_Co=256
 set t_vb=
-set ts=4
 set noexpandtab
-set shiftwidth=4
 set softtabstop=0
 set updatetime=250
 set visualbell
 set wildmenu
 set clipboard=unnamedplus
 set splitbelow
+set completeopt=noinsert,menuone,noselect 
 
 " Verifica se as configuração estão no neovim
 if has("nvim")
@@ -45,23 +44,7 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
-" colorscheme OceanicNext
-" colorscheme solarized8
-colorscheme gruvbox
-" colorscheme solarized
-" colorscheme dracula
-
-" Define o tema com base no horário
-" if strftime("%H") < 6 + 0
-" 	set background=light
-" 	colorscheme OceanicNext
-" elseif strftime("%H") < 12 + 0
-" 	colorscheme dracula
-" elseif strftime("%H") < 18 + 0
-" 	colorscheme gruvbox
-" else
-" 	colorscheme OceanicNext
-" endif
+colorscheme gruvbox 
 
 let g:solarized_termcolors=256
 let g:oceanic_next_terminal_bold   = 1
@@ -76,8 +59,6 @@ let g:user_emmet_expandabbr_key = ',,'
 "---------- CONFIGURAÃO DO AIRLINE ------------
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-" let g:airline_theme='base16_oceanicnext'
-" let g:airline_solarized_bg='dark'
 
 " Ultil snippets
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -148,17 +129,11 @@ let NERDTreeShowHidden = 1
 "" close vim if the only window left open is a NERDTree
 "autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" Configuração do cursor ----------------------------
-let &t_SI = "\e[6 q"
-let &t_EI = "\e[2 q"
-
 " SUPERTAB ------------------------------------------
-" let g:SuperTabDefaultCompletionType = "<c-p>"
-" let g:SuperTabContextDefaultCompletionType = "<c-p>"
-let g:SuperTabDefaultCompletionType = "<c-n>"
+let g:SuperTabContextDefaultCompletionType = "<C-y>"
+let g:SuperTabDefaultCompletionType = "<C-n>"
 
 " Configuração NCM ----------------------------------
-set completeopt=noinsert,menuone,noselect 
 
 " Configurçaão TypeScript
 autocmd FileType typescript setlocal formatprg=prettier\ --parser\ typescript
