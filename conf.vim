@@ -32,6 +32,9 @@ set wildmenu
 set clipboard=unnamedplus
 set splitbelow
 set completeopt=noinsert,menuone,noselect 
+set textwidth=119
+set colorcolumn=+1 
+set lbr
 
 " Verifica se as configuração estão no neovim
 if has("nvim")

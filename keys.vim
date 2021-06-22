@@ -67,11 +67,10 @@ inoremap <leader>exco <C-R>=strftime('%s')<CR>
 
 " GIT------------------------------------------------------------
 let g:gitgutter_sign_modified = '>'
-nnoremap <Leader>n :GitGutterNextHunk<CR>
-nnoremap <Leader>p :GitGutterPrevHunk<CR> 
+nnoremap <Leader>gn :GitGutterNextHunk<CR>
+nnoremap <Leader>gp :GitGutterPrevHunk<CR> 
 inoremap <leader>dff <ESC> :Gdiff<CR> " Git Diff in insertion mode
 nnoremap <leader>dff :Gdiff<CR> " Git Diff in normal mode
-" Git Fugitive---------------------------------------------------
 nnoremap <leader>gb :Gblame<CR>
 
 " ATALHOS PARA PHP REFACTOR ----------------------

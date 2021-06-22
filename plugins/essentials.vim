@@ -13,3 +13,4 @@ Plug 'tpope/vim-eunuch'                                           " Reomeia e ex
 Plug 'rking/ag.vim' 
 Plug 'huytd/vim-quickrun'
 Plug 'fadein/vim-FIGlet' 
+Plug 'APZelos/blamer.nvim'
