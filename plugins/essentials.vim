@@ -15,3 +15,4 @@ Plug 'huytd/vim-quickrun'
 Plug 'fadein/vim-FIGlet' 
 
 source ~/.myvimrc/plugins/blamer.vim 
+source ~/.myvimrc/plugins/phpunit.vim 

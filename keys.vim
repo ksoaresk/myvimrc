@@ -26,6 +26,11 @@ nnoremap <leader>f} va}:fold<CR>
 nnoremap <leader>f[ va[:fold<CR>
 nnoremap <leader>f] va]:fold<CR>
 
+" Set syntax
+nnoremap <leader>cfx :set syntax=xml<CR>
+nnoremap <leader>cfh :set syntax=html<CR>
+nnoremap <leader>cfp :set syntax=php<CR>
+
 " Mover linhas
 nnoremap <M-k> ddkP
 nnoremap <M-Up> ddkP
