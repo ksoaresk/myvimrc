@@ -26,7 +26,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'tasn/vim-tsx'
 Plug 'yuezk/vim-js'
-Plug 'epilande/vim-react-snippets'
+Plug 'mlaursen/vim-react-snippets'
 Plug 'Valloric/MatchTagAlways'
 
 " Golang

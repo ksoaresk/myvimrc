@@ -5,7 +5,7 @@ nnoremap <leader>, A,<ESC>
 nnoremap <leader>{ A{<ESC>
 nnoremap <leader>bn :bn<CR>
 nnoremap <leader>bf :bf<CR>
-nnoremap <leader>bl :bl<CR>
+nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bd :bd<CR>
 
 " Atalhos para o Terminal
@@ -36,6 +36,9 @@ nnoremap <M-k> ddkP
 nnoremap <M-Up> ddkP
 nnoremap <M-j> ddp
 nnoremap <M-Down> ddp 
+
+" Format file
+nnoremap <M-f> gg=G 
 noremap tt :tab split<CR>
 
 " Resize panel

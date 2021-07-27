@@ -47,7 +47,9 @@ if (has("termguicolors"))
 	set termguicolors
 endif
 
+" colorscheme OceanicNext 
 colorscheme gruvbox 
+" colorscheme dracula 
 
 let g:solarized_termcolors=256
 let g:oceanic_next_terminal_bold   = 1
