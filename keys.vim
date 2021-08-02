@@ -81,6 +81,10 @@ inoremap <leader>dff <ESC> :Gdiff<CR> " Git Diff in insertion mode
 nnoremap <leader>dff :Gdiff<CR> " Git Diff in normal mode
 nnoremap <leader>gb :Gblame<CR>
 
+" serilize and unserialize php
+vmap <leader>s <esc>:'<,'> !php -r 'echo serialize(eval("return " . file_get_contents("php://stdin") . ";"));'<CR>
+vmap <leader>u <esc>:'<,'> !php -r 'var_export(unserialize(file_get_contents("php://stdin")));'<CR>
+
 " ATALHOS PARA PHP REFACTOR ----------------------
 " nnoremap <unique> <Leader>rlv :call PhpRenameLocalVariable()<CR>
 " nnoremap <unique> <Leader>rcv :call PhpRenameClassVariable()<CR>
