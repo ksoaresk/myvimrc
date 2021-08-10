@@ -79,7 +79,7 @@ nnoremap <Leader>gn :GitGutterNextHunk<CR>
 nnoremap <Leader>gp :GitGutterPrevHunk<CR> 
 inoremap <leader>dff <ESC> :Gdiff<CR> " Git Diff in insertion mode
 nnoremap <leader>dff :Gdiff<CR> " Git Diff in normal mode
-nnoremap <leader>gb :Gblame<CR>
+nnoremap <leader>gb :Git blame<CR>
 
 " serilize and unserialize php
 vmap <leader>s <esc>:'<,'> !php -r 'echo serialize(eval("return " . file_get_contents("php://stdin") . ";"));'<CR>

@@ -19,13 +19,13 @@ set relativenumber
 set showmatch
 set smartcase
 set smartindent           
-set softtabstop=2
-set ts=2
-set sw=2
+set ts=4
+set softtabstop=4
+set sw=4
+" set expandtab
 set t_Co=256
 set t_vb=
 set noexpandtab
-set softtabstop=0
 set updatetime=250
 set visualbell
 set wildmenu
@@ -64,6 +64,8 @@ let g:user_emmet_expandabbr_key = ',,'
 "---------- CONFIGURAÃO DO AIRLINE ------------
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:airline_theme='gruvbox'
+let g:airline#extensions#disable_rtp_load = 1 
 
 " Ultil snippets
 let g:UltiSnipsExpandTrigger       = "<tab>"
@@ -74,18 +76,18 @@ let g:UltiSnipsSnippetsDir         = "~/.vim/plugged/ultisnips/"
 
 " FZF
 function! s:fzf_statusline()
-  " Override statusline as you like
-  highlight fzf1 ctermfg=161 ctermbg=251
-  highlight fzf2 ctermfg=23 ctermbg=251
-  highlight fzf3 ctermfg=237 ctermbg=251
-  setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
+	" Override statusline as you like
+	highlight fzf1 ctermfg=161 ctermbg=251
+	highlight fzf2 ctermfg=23 ctermbg=251
+	highlight fzf3 ctermfg=237 ctermbg=251
+	setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
 endfunction
 
 autocmd! User FzfStatusLine call <SID>fzf_statusline() 
 
 " PowerLine
 if !exists('g:airline_symbols')
-	 let g:airline_symbols = {}
+	let g:airline_symbols = {}
 endif
 
 " unicode symbols

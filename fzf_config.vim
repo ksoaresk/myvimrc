@@ -62,7 +62,7 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 nnoremap <C-p> :GFiles<CR>
 nnoremap <C-i> :FZF<CR>
 nnoremap <C-l> :Lines<CR>
-nnoremap <C-S>E :Ag<CR>
+nnoremap <C-e> :Rg<CR>
 inoremap <M-s> <ESC>:Snippets<CR>
 
 command! -bang -nargs=* Rg
