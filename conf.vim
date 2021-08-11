@@ -35,6 +35,7 @@ set completeopt=noinsert,menuone,noselect
 set textwidth=119
 set colorcolumn=+1 
 set lbr
+set laststatus=2
 
 " Verifica se as configuração estão no neovim
 if has("nvim")

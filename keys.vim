@@ -8,6 +8,14 @@ nnoremap <leader>bf :bf<CR>
 nnoremap <leader>bp :bp<CR>
 nnoremap <leader>bd :bd<CR>
 
+" Coc-configuration
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+nmap <leader>rn <Plug>(coc-rename)
+
 " Atalhos para o Terminal
 inoremap <F12> <ESC>:sp \| term<CR>
 nnoremap <F12> :sp \| term<CR>

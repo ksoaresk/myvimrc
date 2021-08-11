@@ -60,9 +60,10 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " Comandos para FZF
 nnoremap <C-p> :GFiles<CR>
-nnoremap <C-i> :FZF<CR>
+nnoremap <C-i> :Files<CR>
 nnoremap <C-l> :Lines<CR>
 nnoremap <C-e> :Rg<CR>
+nnoremap <S-b> :Buffers<CR>
 inoremap <M-s> <ESC>:Snippets<CR>
 
 command! -bang -nargs=* Rg
