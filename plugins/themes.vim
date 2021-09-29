@@ -5,6 +5,7 @@ Plug 'dracula/vim', { 'name': 'dracula' }
 Plug 'lifepillar/vim-solarized8'
 Plug 'altercation/vim-colors-solarized'
 Plug 'dunstontc/vim-vscode-theme'
+Plug 'doums/darcula'
 
 " Airline
 Plug 'Lokaltog/vim-powerline'

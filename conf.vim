@@ -19,9 +19,9 @@ set relativenumber
 set showmatch
 set smartcase
 set smartindent           
-set ts=4
-set softtabstop=4
-set sw=4
+set ts=2
+set softtabstop=2
+set sw=2
 " set expandtab
 set t_Co=256
 set t_vb=
@@ -36,6 +36,7 @@ set textwidth=119
 set colorcolumn=+1 
 set lbr
 set laststatus=2
+set switchbuf=newtab
 
 " Verifica se as configuração estão no neovim
 if has("nvim")
@@ -51,6 +52,7 @@ endif
 " colorscheme OceanicNext 
 colorscheme gruvbox 
 " colorscheme dracula 
+" colorscheme darcula 
 
 let g:solarized_termcolors=256
 let g:oceanic_next_terminal_bold   = 1
