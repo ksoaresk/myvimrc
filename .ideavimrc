@@ -9,7 +9,7 @@ nnoremap <leader>) A)<ESC>
 set visualbell
 set relativenumber
 set incsearch
-set hlsearch
+" set hlsearch
 set ignorecase
 set mouse=a
 

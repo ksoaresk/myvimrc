@@ -55,6 +55,7 @@ noremap <C-S-Up> :resize +2<CR>
 noremap <C-S-Down> :resize -2<CR>
 noremap <C-S-Right> :vertical resize +2<CR>
 noremap <C-S-Left> :vertical resize -2<CR>
+noremap <C-h> :set hlsearch!<CR>
 
 map <F5>   :source ~/.vimrc <CR>
 map <c-F5> :PluginInstall <CR>
@@ -74,7 +75,7 @@ nnoremap <leader>sn :cnext<CR>
 nnoremap <leader>sp :cprevious<CR> 
 
 nnoremap <C-s> <ESC>:w! <CR>
-nnoremap <C-q> <ESC>:bd! <CR>
+nnoremap <C-q> <ESC>:qa! <CR>
 nnoremap <C-e>          :tabclose <CR>
 nnoremap <S-t>          :tabnew <CR>
 nnoremap <S-tab>        :tabnext <CR>
