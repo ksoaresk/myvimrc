@@ -107,4 +107,4 @@ alias vimrc="vi ~/.vimrc"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
 
 #Message wellcome
-echo "AGZ - $(echo $USER | sed 's/.*/\u&/g')" | figlet -f slant 
+# echo "AGZ - $(echo $USER | sed 's/.*/\u&/g')" | figlet -f slant 
