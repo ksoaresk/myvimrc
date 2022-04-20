@@ -1,6 +1,6 @@
 let mapleader="\<space>"
 nnoremap <leader>; A;<ESC>
-nnoremap <leader>=> A => 
+nnoremap <leader>> A => 
 nnoremap <leader>, A,<ESC>
 nnoremap <leader>{ A{<ESC>
 nnoremap <leader>bn :bn<CR>
@@ -109,3 +109,12 @@ vmap <leader>u <esc>:'<,'> !php -r 'var_export(unserialize(file_get_contents("ph
 " nnoremap <unique> <Leader>sg :call PhpCreateSettersAndGetters()<CR>
 " nnoremap <unique> <Leader>cog :call PhpCreateGetters()<CR>
 " nnoremap <unique> <Leader>da :call PhpDocAll()<CR> 
+
+
+" Comandos para FZF
+nnoremap <C-p> :GFiles<CR>
+nnoremap <C-i> :Files<CR>
+nnoremap <C-l> :Lines<CR>
+nnoremap <C-e> :Rg<CR>
+nnoremap <S-b> :Buffers<CR>
+inoremap <M-s> <ESC>:Snippts<CR>
