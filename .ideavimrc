@@ -6,6 +6,12 @@ nnoremap <leader>, A,<ESC>
 nnoremap <leader>{ A{<ESC>
 nnoremap <leader>) A)<ESC>
 
+" Mover linhas
+nnoremap <M-k> ddkP
+nnoremap <M-Up> ddkP
+nnoremap <M-j> ddp
+nnoremap <M-Down> ddp
+
 set visualbell
 set relativenumber
 set incsearch

@@ -39,6 +39,7 @@ nnoremap <leader>f] va]:fold<CR>
 nnoremap <leader>cfx :set syntax=xml<CR>
 nnoremap <leader>cfh :set syntax=html<CR>
 nnoremap <leader>cfp :set syntax=php<CR>
+nnoremap <leader>cfj :%!jq .<CR>
 
 " Mover linhas
 nnoremap <M-k> ddkP

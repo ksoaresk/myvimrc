@@ -73,7 +73,7 @@ let g:airline#extensions#disable_rtp_load = 1
 " Ultil snippets
 let g:UltiSnipsExpandTrigger       = "<tab>"
 let g:UltiSnipsJumpForwardTrigger  = "<c-b>"
-let g:UltiSnipsJumpBackwardTrigger = "<c-z>"
+let g:UltiSnipsJumpBackwardTrigger = "<c-y>"
 let g:UltiSnipsEditSplit           = "vertical"
 let g:UltiSnipsSnippetsDir         = "~/.vim/plugged/ultisnips/"
 
