@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 alias cb="xclip -selection clipboard"
 alias vi="nvim"
 alias vimrc="vi ~/.vimrc"
+alias sintegraws_saldo="php -f ~/Documents/consulta-saldo-sintegraws.php"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
 

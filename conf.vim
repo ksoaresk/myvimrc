@@ -37,6 +37,7 @@ set colorcolumn=+1
 set lbr
 set laststatus=2
 set switchbuf=newtab
+" set magic=nomagic
 
 " Verifica se as configuração estão no neovim
 if has("nvim")
