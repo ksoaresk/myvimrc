@@ -7,7 +7,7 @@ Plug 'tpope/vim-surround'                      " Adiciona fechamentos
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips'                        " gerenciamento e uso de snips
+" Plug 'SirVer/ultisnips'                        " gerenciamento e uso de snips
 Plug 'chrisbra/vim-xml-runtime'                " Tratamento e formatação de XML de forma dinamica
 Plug 'majutsushi/tagbar'                       " Navegador de estrutura
 Plug 'vim-syntastic/syntastic'                 " análise de sintaxe

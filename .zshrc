@@ -104,8 +104,13 @@ alias cb="xclip -selection clipboard"
 alias vi="nvim"
 alias vimrc="vi ~/.vimrc"
 alias sintegraws_saldo="php -f ~/Documents/consulta-saldo-sintegraws.php"
+alias saldo_btc="php -f ~/Documents/saldo_btc.php"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh 
 
 #Message wellcome
 # echo "AGZ - $(echo $USER | sed 's/.*/\u&/g')" | figlet -f slant 
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -38,6 +38,8 @@ set lbr
 set laststatus=2
 set switchbuf=newtab
 " set magic=nomagic
+set mouse=
+set tags=./tags,tags;$HOME
 
 " Verifica se as configuração estão no neovim
 if has("nvim")
@@ -134,7 +136,7 @@ let g:airline_symbols.dirty='⚡'
 
 let NERDTreeShowHidden = 1
 " Open a NERDTree automatically when vim starts up
-"autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 "" When open change the focus to the file (and not the NERDTree)
 " autocmd! VimEnter * NERDTree | wincmd w
 " close vim if the only window left open is a NERDTree
@@ -162,3 +164,13 @@ hi tsxEqual guifg=#F99575
 
 " yellow
 hi tsxAttrib guifg=#F8BD7F cterm=italic
+
+" Auto save session on quit vim
+autocmd VimLeave * mksession! ~/.vimsession.vim
+if filereadable("~/.vimsession.vim")
+    source ~/mysession.vim
+endif
+
+"  Configurações para o coc.vim
+set termguicolors
+let g:coc_global_extensions = ['coc-snippets', 'coc-tsserver', 'coc-html', 'coc-css', 'coc-json', 'coc-eslint', 'cod-phpls']
